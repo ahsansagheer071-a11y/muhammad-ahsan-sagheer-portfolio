@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #111113;
+  --foreground: #F8FAFC;
+  --accent-sky: #38BDF8;
+  --accent-sky-light: #7DD3FC;
+  --accent-sky-deep: #0284C7;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  background-color: #111113;
+}
+
+body {
+  background-color: #111113;
+  color: #F8FAFC;
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: #111113;
+}
+
+section {
+  background-color: #111113;
+}
+
+::selection {
+  background-color: #38BDF8;
+  color: #111113;
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111113;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3F3F46;
+}
+
+/* Typography utilities */
+.font-heading {
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+}
