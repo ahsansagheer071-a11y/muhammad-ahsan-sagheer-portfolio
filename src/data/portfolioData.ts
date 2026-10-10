@@ -42,7 +42,7 @@ export const PORTFOLIO_DATA = {
     ],
     browseProjectsCta: "Browse Projects",
     location: "Multan, Punjab, Pakistan",
-    contactEmail: "ahsansagheer071@gmail.com",
+    contactEmail: "ahsansagheer18@gmail.com",
     copyright: "© 2026. Muhammad Ahsan Sagheer — All rights reserved.",
   },
 
@@ -263,7 +263,7 @@ export const PORTFOLIO_DATA = {
   ],
 
   contactLinks: [
-    { label: "Email", href: "mailto:ahsansagheer071@gmail.com", display: "ahsansagheer071@gmail.com", enabled: true },
+    { label: "Email", href: "mailto:ahsansagheer18@gmail.com", display: "ahsansagheer18@gmail.com", enabled: true },
     { label: "Upwork", href: "", display: "Upwork Profile", enabled: false },
     { label: "Fiverr", href: "", display: "Fiverr Profile", enabled: false },
     { label: "GitHub", href: "", display: "GitHub Profile", enabled: false },
