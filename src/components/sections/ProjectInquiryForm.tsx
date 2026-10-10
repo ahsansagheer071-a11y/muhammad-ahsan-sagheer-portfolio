@@ -24,7 +24,8 @@ export const ProjectInquiryForm = () => {
     timeline: "This Month",
     budget: "Not Sure Yet",
     automationCategory: "",
-    hp_company: "", // Honeypot
+    bot_field_honey: "", // Anti-spam honeypot (browser autofill safe)
+    hp_company: "", // Legacy honeypot
   });
 
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -122,6 +123,7 @@ export const ProjectInquiryForm = () => {
       timeline: "This Month",
       budget: "Not Sure Yet",
       automationCategory: "",
+      bot_field_honey: "",
       hp_company: "",
     });
   };
@@ -187,16 +189,20 @@ export const ProjectInquiryForm = () => {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               
-              {/* Spam Honeypot Field (Hidden from real users) */}
-              <div className="hidden" aria-hidden="true">
+              {/* Spam Honeypot Field (Hidden from real users, autofill-safe) */}
+              <div
+                style={{ position: "absolute", left: "-9999px", opacity: 0, height: 0, width: 0, pointerEvents: "none" }}
+                aria-hidden="true"
+              >
                 <input
                   type="text"
-                  name="hp_company"
+                  name="bot_field_honey"
+                  id="bot_field_honey"
                   tabIndex={-1}
                   autoComplete="off"
-                  value={formData.hp_company}
+                  value={formData.bot_field_honey}
                   onChange={(e) =>
-                    setFormData({ ...formData, hp_company: e.target.value })
+                    setFormData({ ...formData, bot_field_honey: e.target.value })
                   }
                 />
               </div>

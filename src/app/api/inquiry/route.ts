@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
 
+// Force dynamic execution on every request — never cache environment variables or responses
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+export const fetchCache = "force-no-store";
+
 interface InquiryPayload {
   name: string;
   email: string;
@@ -10,7 +15,8 @@ interface InquiryPayload {
   budget?: string;
   automationCategory?: string;
   sourceUrl?: string;
-  hp_company?: string; // Honeypot field for bot protection
+  bot_field_honey?: string; // Enhanced honeypot
+  hp_company?: string;      // Legacy honeypot for compatibility
 }
 
 // In-memory sliding window rate limiter: Max 5 submissions per 10 minutes per IP
@@ -42,21 +48,137 @@ function isRateLimited(ip: string): boolean {
   return false;
 }
 
-// Health & configuration check endpoint (GET /api/inquiry)
-export async function GET() {
-  const hasApiKey = Boolean(
-    process.env.RESEND_API_KEY && process.env.RESEND_API_KEY.trim() !== ""
+// Resilient API Key Extractor: checks all common variable names, casings, and trims accidental quotes/spaces
+function getResendApiKey(): { key: string | null; source: string | null } {
+  const candidates: [string, string | undefined][] = [
+    ["RESEND_API_KEY", process.env.RESEND_API_KEY],
+    ["resend_api_key", process.env.resend_api_key],
+    ["RESEND_KEY", process.env.RESEND_KEY],
+    ["resend_key", process.env.resend_key],
+    ["RESEND_TOKEN", process.env.RESEND_TOKEN],
+    ["RESEND_API", process.env.RESEND_API],
+    ["NEXT_PUBLIC_RESEND_API_KEY", process.env.NEXT_PUBLIC_RESEND_API_KEY],
+    ["NEXT_PUBLIC_RESEND_KEY", process.env.NEXT_PUBLIC_RESEND_KEY],
+  ];
+
+  for (const [name, val] of candidates) {
+    if (val && typeof val === "string") {
+      const cleaned = val.trim().replace(/^["']|["']$/g, "");
+      if (cleaned.length > 0) {
+        return { key: cleaned, source: name };
+      }
+    }
+  }
+
+  // Scan all environment variables for any containing "RESEND"
+  for (const [name, val] of Object.entries(process.env)) {
+    const norm = name.trim().toUpperCase();
+    if (
+      (norm.includes("RESEND") || norm.includes("RESEND_API")) &&
+      val &&
+      typeof val === "string"
+    ) {
+      const cleaned = val.trim().replace(/^["']|["']$/g, "");
+      if (cleaned.length > 0) {
+        return { key: cleaned, source: name };
+      }
+    }
+  }
+
+  return { key: null, source: null };
+}
+
+// Sender address sanitizer: ensures public webmail addresses (like @gmail.com) are not passed as Resend 'from'
+function getFromEmail(): { email: string; isFallback: boolean; warning?: string } {
+  const envFrom = process.env.RESEND_FROM_EMAIL?.trim().replace(/^["']|["']$/g, "");
+
+  if (envFrom) {
+    const lower = envFrom.toLowerCase();
+    if (
+      lower.includes("@gmail.com") ||
+      lower.includes("@yahoo.com") ||
+      lower.includes("@hotmail.com") ||
+      lower.includes("@outlook.com")
+    ) {
+      return {
+        email: "Portfolio Notification <onboarding@resend.dev>",
+        isFallback: true,
+        warning: `RESEND_FROM_EMAIL was set to a public webmail address (${envFrom}), which is not permitted by Resend. Falling back to onboarding@resend.dev.`,
+      };
+    }
+    return { email: envFrom, isFallback: false };
+  }
+
+  return {
+    email: "Portfolio Notification <onboarding@resend.dev>",
+    isFallback: true,
+  };
+}
+
+function getDestinationEmail(): string {
+  const envTo = process.env.CONTACT_EMAIL?.trim().replace(/^["']|["']$/g, "");
+  if (envTo && envTo.includes("@")) {
+    return envTo;
+  }
+  return "ahsansagheer18@gmail.com";
+}
+
+// Live diagnostic health check endpoint (GET /api/inquiry)
+export async function GET(request: Request) {
+  const { key, source } = getResendApiKey();
+  const hasApiKey = Boolean(key);
+  const fromInfo = getFromEmail();
+  const destinationEmail = getDestinationEmail();
+
+  const url = new URL(request.url);
+  const testPing = url.searchParams.get("test") === "true";
+
+  let resendPingResult: Record<string, any> | null = null;
+
+  // Optional live test ping to Resend API without revealing any secret characters
+  if (testPing && key) {
+    try {
+      const resendCheck = await fetch("https://api.resend.com/api-keys", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${key}`,
+        },
+      });
+
+      const checkData = await resendCheck.json().catch(() => ({}));
+      resendPingResult = {
+        httpStatus: resendCheck.status,
+        authorized: resendCheck.ok,
+        message: resendCheck.ok ? "API Key is active and verified by Resend" : checkData?.message || "Rejected by Resend",
+      };
+    } catch (err: any) {
+      resendPingResult = {
+        httpStatus: 0,
+        authorized: false,
+        message: err?.message || "Failed to contact Resend API",
+      };
+    }
+  }
+
+  // Safe list of detected environment variable keys (names only, NEVER values)
+  const presentResendEnvNames = Object.keys(process.env).filter((k) =>
+    k.toUpperCase().includes("RESEND")
   );
-  const destinationEmail = process.env.CONTACT_EMAIL || "ahsansagheer18@gmail.com";
-  const fromEmail =
-    process.env.RESEND_FROM_EMAIL ||
-    "Portfolio Notification <onboarding@resend.dev>";
 
   return NextResponse.json({
     status: "online",
     configured: hasApiKey,
+    keyDetected: hasApiKey,
+    keySource: source,
+    keyPrefix: hasApiKey && key ? key.substring(0, 3) + "..." : "none",
+    keyFormatValid: hasApiKey && key ? key.startsWith("re_") : false,
+    keyLength: hasApiKey && key ? key.length : 0,
     recipient: destinationEmail,
-    sender: fromEmail,
+    sender: fromInfo.email,
+    senderWarning: fromInfo.warning || null,
+    vercelEnv: process.env.VERCEL_ENV || process.env.NODE_ENV || "unknown",
+    presentResendEnvNames,
+    resendPingResult,
     timestamp: new Date().toISOString(),
   });
 }
@@ -70,6 +192,7 @@ export async function POST(request: Request) {
       "anonymous-client";
 
     if (isRateLimited(ip)) {
+      console.warn(`[Rate Limit Exceeded]: IP ${ip}`);
       return NextResponse.json(
         {
           success: false,
@@ -83,14 +206,9 @@ export async function POST(request: Request) {
     // 2. Parse payload
     const body: InquiryPayload = await request.json();
 
-    // 3. Spam Protection: Honeypot check
-    if (body.hp_company && body.hp_company.trim() !== "") {
-      // Silently return success to neutralize spam bots without sending email
-      return NextResponse.json({
-        success: true,
-        message: "Inquiry received successfully.",
-      });
-    }
+    // 3. Smart Honeypot Handling (Never discard legitimate client inquiries)
+    const honeypotValue = body.bot_field_honey || body.hp_company;
+    let isPotentialBot = Boolean(honeypotValue && honeypotValue.trim() !== "");
 
     // 4. Server-Side Validation
     const { name, email, service, projectDetails } = body;
@@ -124,7 +242,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const destinationEmail = process.env.CONTACT_EMAIL || "ahsansagheer18@gmail.com";
+    const destinationEmail = getDestinationEmail();
     const timestamp = new Date().toLocaleString("en-US", {
       timeZone: "Asia/Karachi",
       dateStyle: "full",
@@ -151,6 +269,7 @@ Sender Details:
 • Email: ${cleanEmail}
 • Submission Time: ${timestamp} (PKT)
 • Origin Page: ${originUrl}
+${isPotentialBot ? "• Warning: Honeypot field triggered (possible browser autofill or bot)" : ""}
 
 Project Requirements:
 • Service Needed: ${cleanService}
@@ -192,6 +311,14 @@ Reply directly to this email to contact ${cleanName}.
     <!-- Main Content -->
     <div style="padding:32px;">
       
+      ${
+        isPotentialBot
+          ? `<div style="background-color:#451a03;border:1px solid #78350f;border-radius:8px;padding:12px;margin-bottom:20px;font-size:12px;color:#fef3c7;">
+              Notice: Hidden honeypot field contained data. If this was a real user, browser autofill may have filled it.
+            </div>`
+          : ""
+      }
+
       <!-- Sender Information Box -->
       <div style="background-color:#111113;border:1px solid #27272a;border-radius:12px;padding:20px;margin-bottom:24px;">
         <div style="font-size:11px;font-weight:700;color:#38bdf8;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">
@@ -286,13 +413,13 @@ Reply directly to this email to contact ${cleanName}.
 </html>
 `.trim();
 
-    // 7. Email Dispatcher via Resend REST API
-    const resendApiKey = process.env.RESEND_API_KEY?.trim();
+    // 7. Extract and Validate Resend API Key
+    const { key: resendApiKey, source: keySource } = getResendApiKey();
 
     if (!resendApiKey) {
-      console.warn(
-        "[Resend Warning]: RESEND_API_KEY is not defined in environment variables.\n" +
-        "Lead content logged securely to server console:\n" +
+      console.error(
+        "[Resend Error]: RESEND_API_KEY environment variable is missing or empty in Vercel runtime.\n" +
+        "Lead content was logged securely to server console:\n" +
         textContent
       );
 
@@ -300,15 +427,19 @@ Reply directly to this email to contact ${cleanName}.
         {
           success: false,
           error:
-            "Email service is currently being configured. Please contact ahsansagheer18@gmail.com directly.",
+            "Email service is currently awaiting API key configuration in Vercel. Please email ahsansagheer18@gmail.com directly.",
         },
         { status: 503 }
       );
     }
 
-    const fromEmail =
-      process.env.RESEND_FROM_EMAIL?.trim() ||
-      "Portfolio Notification <onboarding@resend.dev>";
+    const { email: fromEmail } = getFromEmail();
+
+    const subjectPrefix = isPotentialBot ? "[Potential Autofill Flag] " : "";
+    const emailSubject = `${subjectPrefix}New Project Inquiry: ${cleanService} — ${cleanName}`;
+
+    // 8. Execute Resend API Call
+    console.log(`[Resend Dispatch Attempt]: Using key from ${keySource}, recipient: ${destinationEmail}, sender: ${fromEmail}`);
 
     const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -320,7 +451,7 @@ Reply directly to this email to contact ${cleanName}.
         from: fromEmail,
         to: [destinationEmail],
         reply_to: cleanEmail,
-        subject: `New Project Inquiry: ${cleanService} — ${cleanName}`,
+        subject: emailSubject,
         text: textContent,
         html: htmlContent,
       }),
@@ -328,20 +459,25 @@ Reply directly to this email to contact ${cleanName}.
 
     const responseData = await resendResponse.json().catch(() => ({}));
 
+    // 9. Strict Failure Handling — NEVER return success if Resend rejects
     if (!resendResponse.ok) {
       console.error("[Resend API Error Response]:", {
         status: resendResponse.status,
         statusText: resendResponse.statusText,
         error: responseData,
+        recipient: destinationEmail,
+        from: fromEmail,
       });
 
-      // Provide human-friendly error messages based on Resend error responses
       let userErrorMessage =
-        "Unable to send your inquiry notification at this moment. Please email ahsansagheer18@gmail.com directly.";
+        "Unable to send your inquiry at this moment. Please email ahsansagheer18@gmail.com directly.";
 
       if (resendResponse.status === 403) {
         userErrorMessage =
           "Email service authorization error. Please reach out to ahsansagheer18@gmail.com directly.";
+      } else if (resendResponse.status === 401 || resendResponse.status === 400) {
+        userErrorMessage =
+          "Email service authentication issue. Please reach out to ahsansagheer18@gmail.com directly.";
       } else if (resendResponse.status === 429) {
         userErrorMessage =
           "Email service rate limit reached. Please email ahsansagheer18@gmail.com directly.";
@@ -352,12 +488,19 @@ Reply directly to this email to contact ${cleanName}.
           success: false,
           error: userErrorMessage,
           debugCode: responseData?.name || `HTTP_${resendResponse.status}`,
+          debugMessage: responseData?.message || undefined,
         },
         { status: 502 }
       );
     }
 
-    // Success response with Resend email ID
+    // 10. Genuine Verified Success
+    console.log("[Resend Dispatch Success]:", {
+      emailId: responseData?.id,
+      recipient: destinationEmail,
+      clientName: cleanName,
+    });
+
     return NextResponse.json({
       success: true,
       message:
