@@ -42,6 +42,25 @@ function isRateLimited(ip: string): boolean {
   return false;
 }
 
+// Health & configuration check endpoint (GET /api/inquiry)
+export async function GET() {
+  const hasApiKey = Boolean(
+    process.env.RESEND_API_KEY && process.env.RESEND_API_KEY.trim() !== ""
+  );
+  const destinationEmail = process.env.CONTACT_EMAIL || "ahsansagheer18@gmail.com";
+  const fromEmail =
+    process.env.RESEND_FROM_EMAIL ||
+    "Portfolio Notification <onboarding@resend.dev>";
+
+  return NextResponse.json({
+    status: "online",
+    configured: hasApiKey,
+    recipient: destinationEmail,
+    sender: fromEmail,
+    timestamp: new Date().toISOString(),
+  });
+}
+
 export async function POST(request: Request) {
   try {
     // 1. IP & Rate Limiting Check
@@ -55,7 +74,7 @@ export async function POST(request: Request) {
         {
           success: false,
           error:
-            "Too many submission attempts. Please wait a few minutes or send an email directly.",
+            "Too many submission attempts. Please wait a few minutes or contact ahsansagheer18@gmail.com directly.",
         },
         { status: 429 }
       );
@@ -99,7 +118,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           success: false,
-          error: "Please provide a brief description of your project.",
+          error: "Please provide a brief description of your project (minimum 5 characters).",
         },
         { status: 400 }
       );
@@ -135,7 +154,7 @@ Sender Details:
 
 Project Requirements:
 • Service Needed: ${cleanService}
-• Automation Intent: ${cleanCategory}
+• Category / Focus: ${cleanCategory}
 • Target Timeline: ${cleanTimeline}
 • Estimated Budget: ${cleanBudget}
 
@@ -145,7 +164,7 @@ ${cleanDetails}
 Process to Improve:
 ${cleanImprovement}
 --------------------------------------------------
-Reply directly to this email to contact the client.
+Reply directly to this email to contact ${cleanName}.
 `.trim();
 
     // 6. Styled HTML Email Template
@@ -268,66 +287,90 @@ Reply directly to this email to contact the client.
 `.trim();
 
     // 7. Email Dispatcher via Resend REST API
-    const resendApiKey = process.env.RESEND_API_KEY;
+    const resendApiKey = process.env.RESEND_API_KEY?.trim();
 
-    if (resendApiKey) {
-      const fromEmail =
-        process.env.RESEND_FROM_EMAIL ||
-        "Muhammad Portfolio <onboarding@resend.dev>";
+    if (!resendApiKey) {
+      console.warn(
+        "[Resend Warning]: RESEND_API_KEY is not defined in environment variables.\n" +
+        "Lead content logged securely to server console:\n" +
+        textContent
+      );
 
-      const resendResponse = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${resendApiKey.trim()}`,
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "Email service is currently being configured. Please contact ahsansagheer18@gmail.com directly.",
         },
-        body: JSON.stringify({
-          from: fromEmail,
-          to: [destinationEmail],
-          reply_to: cleanEmail,
-          subject: `New Project Inquiry: ${cleanService} — ${cleanName}`,
-          text: textContent,
-          html: htmlContent,
-        }),
-      });
-
-      if (!resendResponse.ok) {
-        const errorData = await resendResponse.json().catch(() => ({}));
-        console.error("[Resend API Error]:", errorData);
-
-        // Securely log email content on server so no inquiry is ever lost
-        console.log("[INQUIRY BACKUP LOG]:\n", textContent);
-
-        return NextResponse.json({
-          success: true,
-          message:
-            "Thanks — your project details have been sent. I’ll get back to you shortly.",
-        });
-      }
-    } else {
-      // In development or when RESEND_API_KEY is not yet populated in Vercel
-      console.log(
-        "==================================================\n" +
-        "⚡ [NEW INQUIRY RECEIVED — RESEND_API_KEY PENDING] ⚡\n" +
-        `To: ${destinationEmail}\n` +
-        `Reply-To: ${cleanEmail}\n` +
-        textContent +
-        "\n=================================================="
+        { status: 503 }
       );
     }
 
+    const fromEmail =
+      process.env.RESEND_FROM_EMAIL?.trim() ||
+      "Portfolio Notification <onboarding@resend.dev>";
+
+    const resendResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${resendApiKey}`,
+      },
+      body: JSON.stringify({
+        from: fromEmail,
+        to: [destinationEmail],
+        reply_to: cleanEmail,
+        subject: `New Project Inquiry: ${cleanService} — ${cleanName}`,
+        text: textContent,
+        html: htmlContent,
+      }),
+    });
+
+    const responseData = await resendResponse.json().catch(() => ({}));
+
+    if (!resendResponse.ok) {
+      console.error("[Resend API Error Response]:", {
+        status: resendResponse.status,
+        statusText: resendResponse.statusText,
+        error: responseData,
+      });
+
+      // Provide human-friendly error messages based on Resend error responses
+      let userErrorMessage =
+        "Unable to send your inquiry notification at this moment. Please email ahsansagheer18@gmail.com directly.";
+
+      if (resendResponse.status === 403) {
+        userErrorMessage =
+          "Email service authorization error. Please reach out to ahsansagheer18@gmail.com directly.";
+      } else if (resendResponse.status === 429) {
+        userErrorMessage =
+          "Email service rate limit reached. Please email ahsansagheer18@gmail.com directly.";
+      }
+
+      return NextResponse.json(
+        {
+          success: false,
+          error: userErrorMessage,
+          debugCode: responseData?.name || `HTTP_${resendResponse.status}`,
+        },
+        { status: 502 }
+      );
+    }
+
+    // Success response with Resend email ID
     return NextResponse.json({
       success: true,
       message:
         "Thanks — your project details have been sent. I’ll get back to you shortly.",
+      emailId: responseData?.id,
     });
-  } catch (error) {
+  } catch (error: any) {
     console.error("[Inquiry API Unexpected Error]:", error);
     return NextResponse.json(
       {
         success: false,
         error:
-          "An unexpected error occurred while sending your inquiry. Please try again or email ahsansagheer18@gmail.com directly.",
+          "An unexpected error occurred while processing your inquiry. Please email ahsansagheer18@gmail.com directly.",
       },
       { status: 500 }
     );
