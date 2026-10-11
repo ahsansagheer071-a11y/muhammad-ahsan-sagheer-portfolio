@@ -86,13 +86,13 @@ export const Navbar = () => {
         <div className="hidden lg:flex items-center gap-8">
           <nav className="flex items-center gap-8 text-sm font-medium">
             <a
-              href="#home"
+              href="/#home"
               className="text-[#F8FAFC] hover:text-[#38BDF8] transition-colors"
             >
               Home
             </a>
             <a
-              href="#portfolio"
+              href="/#portfolio"
               className="text-[#A1A1AA] hover:text-[#F8FAFC] transition-colors flex items-center gap-1.5"
             >
               <span>Portfolio</span>
@@ -101,7 +101,7 @@ export const Navbar = () => {
               </span>
             </a>
             <a
-              href="#about"
+              href="/#about"
               className="text-[#A1A1AA] hover:text-[#F8FAFC] transition-colors"
             >
               About
@@ -110,7 +110,7 @@ export const Navbar = () => {
 
           <Button
             asAnchor
-            href="#inquiry"
+            href="/#inquiry"
             variant="dark"
             size="sm"
             className="rounded-full px-5 py-2 text-xs font-semibold hover:border-[#38BDF8] hover:text-[#38BDF8]"
@@ -125,14 +125,14 @@ export const Navbar = () => {
         <div className="lg:hidden bg-[#18181B] border-b border-[#27272A] px-6 py-6 space-y-4">
           <nav className="flex flex-col space-y-3 text-sm font-medium">
             <a
-              href="#home"
+              href="/#home"
               onClick={() => setMobileMenuOpen(false)}
               className="text-[#F8FAFC] hover:text-[#38BDF8] py-1"
             >
               Home
             </a>
             <a
-              href="#portfolio"
+              href="/#portfolio"
               onClick={() => setMobileMenuOpen(false)}
               className="text-[#A1A1AA] hover:text-[#F8FAFC] py-1 flex items-center justify-between"
             >
@@ -142,7 +142,7 @@ export const Navbar = () => {
               </span>
             </a>
             <a
-              href="#about"
+              href="/#about"
               onClick={() => setMobileMenuOpen(false)}
               className="text-[#A1A1AA] hover:text-[#F8FAFC] py-1"
             >
@@ -152,7 +152,7 @@ export const Navbar = () => {
           <div className="pt-2">
             <Button
               asAnchor
-              href="#inquiry"
+              href="/#inquiry"
               variant="sky"
               size="sm"
               className="w-full text-center"

@@ -6,7 +6,7 @@ import { PORTFOLIO_DATA } from "@/data/portfolioData";
 
 export const QuoteSection = () => {
   return (
-    <section className="w-full py-24 md:py-32 bg-[#111113] border-y border-[#27272A]/40">
+    <section className="w-full py-14 sm:py-18 bg-[#111113] border-y border-[#27272A]/40">
       <div className="max-w-4xl mx-auto px-6 sm:px-10 text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
