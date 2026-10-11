@@ -9,6 +9,8 @@ import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { CreativityZone } from "@/components/sections/CreativityZone";
 import { QuoteSection } from "@/components/sections/QuoteSection";
 import { WhatIDo } from "@/components/sections/WhatIDo";
+import { Capabilities } from "@/components/sections/Capabilities";
+import { ToolsAndPlatforms } from "@/components/sections/ToolsAndPlatforms";
 import { HowIWork } from "@/components/sections/HowIWork";
 import { LeadGeneration } from "@/components/sections/LeadGeneration";
 import { FreeAuditCTA } from "@/components/sections/FreeAuditCTA";
@@ -50,28 +52,34 @@ export default function Home() {
       {/* 9. Editorial Quote Section */}
       <QuoteSection />
 
-      {/* 10. Core Services & Consolidated Capabilities Ecosystem */}
+      {/* 10. Core Services */}
       <WhatIDo />
 
-      {/* 11. How I Work (4-Step Methodology) */}
+      {/* 11. Restored Capabilities Section */}
+      <Capabilities />
+
+      {/* 12. Restored Tools & Platforms Ecosystem */}
+      <ToolsAndPlatforms />
+
+      {/* 13. How I Work (4-Step Methodology) */}
       <HowIWork />
 
-      {/* 12. Lead Generation Scoping */}
+      {/* 14. Lead Generation Scoping */}
       <LeadGeneration />
 
-      {/* 13. Free Workflow Consultation & Audit */}
+      {/* 15. Free Workflow Consultation & Audit */}
       <FreeAuditCTA />
 
-      {/* 14. What Clients Can Expect */}
+      {/* 16. What Clients Can Expect */}
       <Testimonials />
 
-      {/* 15. Final Personal Introduction CTA */}
+      {/* 17. Final Personal Introduction CTA */}
       <FinalCTA />
 
-      {/* 16. Project Inquiry Form & Contact */}
+      {/* 18. Project Inquiry Form & Contact */}
       <ProjectInquiryForm />
 
-      {/* 17. Footer */}
+      {/* 19. Footer */}
       <Footer />
     </main>
   );

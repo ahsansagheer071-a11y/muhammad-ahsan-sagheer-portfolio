@@ -33,7 +33,7 @@
   <!-- Header -->
   <g transform="translate(100, 70)">
     <rect width="40" height="40" rx="10" fill="url(#clickupPurple)"/>
-    <path d="M 115,95 L 120,90 L 125,95" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 15,22 L 20,16 L 25,22" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
     <text x="60" y="26" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="24" font-weight="800" letter-spacing="1">CLICKUP ENTERPRISE INTAKE &amp; DISPATCH WORKFLOW</text>
     <text x="60" y="50" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="14" font-weight="500">Automated Client Brief Ingestion, Custom Field Mapping &amp; Asset Folder Provisioning</text>
     <rect x="1460" y="10" width="260" height="36" rx="18" fill="#2E1065" stroke="#7C3AED" stroke-width="1"/>

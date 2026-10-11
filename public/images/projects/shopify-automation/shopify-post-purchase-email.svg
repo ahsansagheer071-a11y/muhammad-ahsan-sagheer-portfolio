@@ -33,7 +33,7 @@
   <!-- Top Bar -->
   <g transform="translate(100, 70)">
     <rect width="42" height="42" rx="10" fill="url(#shopifyGreen)"/>
-    <path d="M 124,84 L 115,92 L 122,102 L 132,88 Z" fill="#FFFFFF"/>
+    <path d="M 21,12 C 18,12 16,14 16,17 L 14,17 L 13,30 L 29,30 L 28,17 L 26,17 C 26,14 24,12 21,12 Z M 21,14 C 22.5,14 24,15.2 24,17 L 18,17 C 18,15.2 19.5,14 21,14 Z" fill="#FFFFFF"/>
     <text x="60" y="26" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="24" font-weight="800" letter-spacing="1">SHOPIFY POST-PURCHASE RETENTION PIPELINE</text>
     <text x="60" y="50" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="14" font-weight="500">Autonomous Webhook Routing, Segment Evaluation, Personalized Klaviyo Dispatch</text>
     <rect x="1460" y="10" width="260" height="36" rx="18" fill="#064E3B" stroke="#059669" stroke-width="1"/>

@@ -37,7 +37,7 @@
   <!-- Top Header Bar -->
   <g transform="translate(100, 70)">
     <rect width="42" height="30" rx="8" fill="url(#redAccent)"/>
-    <polygon points="117,80 128,85 117,90" fill="#ffffff"/>
+    <polygon points="17,9 17,21 28,15" fill="#ffffff"/>
     <text x="60" y="24" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="24" font-weight="800" letter-spacing="1">YOUTUBE COMMUNITY AI AUTOMATION PIPELINE</text>
     <text x="60" y="48" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="14" font-weight="500">Autonomous Comment Triage, Sentiment Scoring &amp; Contextual Response Engine</text>
     <rect x="1500" y="8" width="220" height="36" rx="18" fill="#1E293B" stroke="#334155" stroke-width="1"/>
