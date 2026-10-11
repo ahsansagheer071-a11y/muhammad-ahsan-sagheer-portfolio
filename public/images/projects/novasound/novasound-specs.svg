@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="nsSpecBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0D14"/>
+      <stop offset="100%" stop-color="#060709"/>
+    </linearGradient>
+    <linearGradient id="curveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#nsSpecBg)"/>
+
+  <!-- Header -->
+  <text x="120" y="90" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900" fill="#38BDF8" letter-spacing="6">NOVASOUND ACOUSTIC LABS</text>
+  <text x="1800" y="90" text-anchor="end" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#64748B" letter-spacing="4">TECHNICAL BENCHMARK &amp; ACOUSTIC DISSECTION</text>
+
+  <!-- Left Card: Frequency Response Curve -->
+  <g transform="translate(120, 150)">
+    <rect width="820" height="850" rx="16" fill="#0E121A" stroke="#1E293B" stroke-width="1.5"/>
+    <text x="50" y="60" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#38BDF8" letter-spacing="3">HARMAN 2024 TARGET FREQUENCY RESPONSE</text>
+    <text x="50" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" fill="#F8FAFC">Acoustic Calibration Graph</text>
+    <text x="50" y="135" font-family="-apple-system, sans-serif" font-size="14" fill="#64748B">Measured at 1kHz reference level • ± 0.5dB Left/Right channel driver match</text>
+
+    <!-- Graph Grid Canvas -->
+    <g transform="translate(50, 180)">
+      <rect width="720" height="420" fill="#080B10" stroke="#1E293B"/>
+      <!-- Grid Lines -->
+      <line x1="0" y1="70" x2="720" y2="70" stroke="#1E293B" stroke-dasharray="2,4"/>
+      <line x1="0" y1="140" x2="720" y2="140" stroke="#1E293B" stroke-dasharray="2,4"/>
+      <line x1="0" y1="210" x2="720" y2="210" stroke="#1E293B" stroke-dasharray="2,4"/>
+      <line x1="0" y1="280" x2="720" y2="280" stroke="#1E293B" stroke-dasharray="2,4"/>
+      <line x1="0" y1="350" x2="720" y2="350" stroke="#1E293B" stroke-dasharray="2,4"/>
+
+      <!-- Vertical Frequency Decades -->
+      <line x1="120" y1="0" x2="120" y2="420" stroke="#1E293B"/>
+      <line x1="300" y1="0" x2="300" y2="420" stroke="#1E293B"/>
+      <line x1="480" y1="0" x2="480" y2="420" stroke="#1E293B"/>
+      <line x1="660" y1="0" x2="660" y2="420" stroke="#1E293B"/>
+
+      <!-- Frequency Curve Path -->
+      <path d="M0 260 C60 250 100 210 180 215 C260 220 340 225 420 220 C500 215 560 170 620 180 C680 190 720 220 720 220" fill="none" stroke="url(#curveGrad)" stroke-width="4.5"/>
+
+      <!-- Frequency Labels -->
+      <text x="10" y="405" font-family="monospace" font-size="11" fill="#475569">20 Hz</text>
+      <text x="120" y="405" font-family="monospace" font-size="11" fill="#475569">100 Hz</text>
+      <text x="300" y="405" font-family="monospace" font-size="11" fill="#475569">1 kHz</text>
+      <text x="480" y="405" font-family="monospace" font-size="11" fill="#475569">10 kHz</text>
+      <text x="660" y="405" font-family="monospace" font-size="11" fill="#475569">40 kHz</text>
+    </g>
+
+    <!-- Key Metrics Table below graph -->
+    <g transform="translate(50, 650)">
+      <g transform="translate(0, 0)">
+        <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="900" fill="#38BDF8">4 Hz – 45 kHz</text>
+        <text x="0" y="50" font-family="-apple-system, sans-serif" font-size="13" fill="#94A3B8">Ultra-Wide Hi-Res Bandwidth</text>
+      </g>
+      <g transform="translate(360, 0)">
+        <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="900" fill="#818CF8">990 kbps</text>
+        <text x="0" y="50" font-family="-apple-system, sans-serif" font-size="13" fill="#94A3B8">Sony LDAC &amp; aptX Lossless Support</text>
+      </g>
+      <g transform="translate(0, 90)">
+        <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="900" fill="#F8FAFC">48 dB</text>
+        <text x="0" y="50" font-family="-apple-system, sans-serif" font-size="13" fill="#94A3B8">Deepest Ambient Noise Supression</text>
+      </g>
+      <g transform="translate(360, 90)">
+        <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="900" fill="#F8FAFC">285 g</text>
+        <text x="0" y="50" font-family="-apple-system, sans-serif" font-size="13" fill="#94A3B8">Ultralight Titanium Headband Weight</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Card: Driver Assembly Exploded Infographic -->
+  <g transform="translate(980, 150)">
+    <rect width="820" height="850" rx="16" fill="#0E121A" stroke="#1E293B" stroke-width="1.5"/>
+    <text x="50" y="60" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#38BDF8" letter-spacing="3">EXPLODED TRANSDUCER ARCHITECTURE</text>
+    <text x="50" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" fill="#F8FAFC">Acoustic Chamber Breakdown</text>
+
+    <!-- Dissection Layer Stacks -->
+    <g transform="translate(50, 160)">
+      <!-- Layer 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="720" height="90" rx="10" fill="#131924" stroke="#1E293B"/>
+        <circle cx="50" cy="45" r="22" fill="#0284C7"/>
+        <text x="50" y="51" text-anchor="middle" font-family="monospace" font-size="14" font-weight="800" fill="#F8FAFC">01</text>
+        <text x="90" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="17" font-weight="700" fill="#F8FAFC">Beryllium-Infused 40mm Diaphragm</text>
+        <text x="90" y="64" font-family="-apple-system, sans-serif" font-size="13" fill="#64748B">Delivers lightning-fast transient response with zero membrane distortion.</text>
+      </g>
+
+      <!-- Layer 2 -->
+      <g transform="translate(0, 115)">
+        <rect width="720" height="90" rx="10" fill="#131924" stroke="#1E293B"/>
+        <circle cx="50" cy="45" r="22" fill="#0369A1"/>
+        <text x="50" y="51" text-anchor="middle" font-family="monospace" font-size="14" font-weight="800" fill="#F8FAFC">02</text>
+        <text x="90" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="17" font-weight="700" fill="#F8FAFC">Neodymium N52 Magnetic Motor</text>
+        <text x="90" y="64" font-family="-apple-system, sans-serif" font-size="13" fill="#64748B">Generates 1.5 Tesla flux density for uncompromising punch and dynamic range.</text>
+      </g>
+
+      <!-- Layer 3 -->
+      <g transform="translate(0, 230)">
+        <rect width="720" height="90" rx="10" fill="#131924" stroke="#1E293B"/>
+        <circle cx="50" cy="45" r="22" fill="#0F766E"/>
+        <text x="50" y="51" text-anchor="middle" font-family="monospace" font-size="14" font-weight="800" fill="#F8FAFC">03</text>
+        <text x="90" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="17" font-weight="700" fill="#F8FAFC">Dual-Chamber Bass Reflex Damping</text>
+        <text x="90" y="64" font-family="-apple-system, sans-serif" font-size="13" fill="#64748B">Eliminates cabinet resonance and delivers sub-bass clarity down to 4Hz.</text>
+      </g>
+
+      <!-- Layer 4 -->
+      <g transform="translate(0, 345)">
+        <rect width="720" height="90" rx="10" fill="#131924" stroke="#1E293B"/>
+        <circle cx="50" cy="45" r="22" fill="#4338CA"/>
+        <text x="50" y="51" text-anchor="middle" font-family="monospace" font-size="14" font-weight="800" fill="#F8FAFC">04</text>
+        <text x="90" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="17" font-weight="700" fill="#F8FAFC">Quad-Microphone Hybrid ANC Array</text>
+        <text x="90" y="64" font-family="-apple-system, sans-serif" font-size="13" fill="#64748B">Feedforward and feedback microphones sampling exterior ambient noise 160,000x/sec.</text>
+      </g>
+    </g>
+
+    <!-- Agency Signoff Badge -->
+    <g transform="translate(50, 680)">
+      <rect width="720" height="80" rx="10" fill="#090D15" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="360" y="35" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#38BDF8">Engineered For Critical Listening</text>
+      <text x="360" y="58" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" fill="#94A3B8">Award-Winning Industrial Hardware Design &amp; Digital Advertising Campaign Suite</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="apexBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D0D10"/>
+      <stop offset="50%" stop-color="#16161B"/>
+      <stop offset="100%" stop-color="#0A0A0C"/>
+    </linearGradient>
+    <linearGradient id="redGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="50%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#991B1B"/>
+    </linearGradient>
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A2A33"/>
+      <stop offset="50%" stop-color="#181820"/>
+      <stop offset="100%" stop-color="#0E0E14"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#apexBg)"/>
+
+  <!-- Performance Tachometer & Track Line Accent -->
+  <g opacity="0.12" stroke="#EF4444" stroke-width="1.5">
+    <circle cx="1300" cy="540" r="320" fill="none" stroke-dasharray="10,14"/>
+    <circle cx="1300" cy="540" r="440" fill="none" stroke-dasharray="14,20"/>
+    <line x1="120" y1="140" x2="1800" y2="140"/>
+  </g>
+
+  <!-- Top Header -->
+  <text x="120" y="90" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900" fill="#F8FAFC" letter-spacing="6">APEX AUTO</text>
+  <text x="350" y="90" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#EF4444" letter-spacing="4">PERFORMANCE &amp; MOTORSPORT SERVICE</text>
+  <text x="1800" y="90" text-anchor="end" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#71717A" letter-spacing="4">COMMERCIAL SERVICE CAMPAIGN</text>
+
+  <!-- Left: High-Impact Typography Headline -->
+  <g transform="translate(120, 220)">
+    <rect x="0" y="0" width="220" height="34" rx="17" fill="#450A0A" stroke="#DC2626"/>
+    <text x="110" y="22" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="800" fill="#FCA5A5" letter-spacing="2">FACTORY CERTIFIED MASTER TECHS</text>
+
+    <text x="0" y="110" font-family="'Plus Jakarta Sans', sans-serif" font-size="76" font-weight="900" fill="#F8FAFC" letter-spacing="-2">
+      PRECISION
+    </text>
+    <text x="0" y="185" font-family="'Plus Jakarta Sans', sans-serif" font-size="76" font-weight="900" fill="url(#redGlow)" letter-spacing="-2">
+      DRIVEN.
+    </text>
+    <text x="0" y="260" font-family="'Plus Jakarta Sans', sans-serif" font-size="76" font-weight="900" fill="#F8FAFC" letter-spacing="-2">
+      TRACK READY.
+    </text>
+
+    <text x="0" y="325" font-family="-apple-system, sans-serif" font-size="18" fill="#A1A1AA" max-width="540" line-height="28">
+      European supercar maintenance, high-torque dyno tuning, and bespoke motorsport track preparation. Where obsessive mechanical craft meets digital telemetry.
+    </text>
+
+    <!-- Service Spec Badges -->
+    <g transform="translate(0, 410)">
+      <g transform="translate(0, 0)">
+        <text x="0" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="900" fill="#F8FAFC">AWD DYNO</text>
+        <text x="0" y="58" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#71717A">2,000 HP Mainline Calibration</text>
+      </g>
+      <g transform="translate(220, 0)">
+        <text x="0" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="900" fill="#EF4444">OEM DIAG</text>
+        <text x="0" y="58" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#71717A">Porsche / BMW M / AMG</text>
+      </g>
+      <g transform="translate(440, 0)">
+        <text x="0" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="900" fill="#F8FAFC">ZERO DELAY</text>
+        <text x="0" y="58" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#71717A">Direct Digital Service Portal</text>
+      </g>
+    </g>
+
+    <!-- Booking CTA Button -->
+    <g transform="translate(0, 520)">
+      <rect x="0" y="0" width="240" height="56" rx="28" fill="url(#redGlow)"/>
+      <text x="120" y="35" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">BOOK TRACK SERVICE</text>
+      <text x="270" y="35" font-family="-apple-system, sans-serif" font-size="14" fill="#71717A">Certified Motorsport Bay 04</text>
+    </g>
+  </g>
+
+  <!-- Right: Modern Automotive Workshop Artwork -->
+  <g transform="translate(940, 180)">
+    <rect width="860" height="780" rx="16" fill="#111116" stroke="#272733" stroke-width="2"/>
+    
+    <!-- Workshop Bay Silhouette Graphic -->
+    <g transform="translate(60, 60)">
+      <!-- Bay Frame with Overhead LED Light Strip -->
+      <rect width="740" height="440" rx="12" fill="#181820"/>
+      <!-- Overhead Hexagonal LED Workshop Lights -->
+      <polygon points="120,40 180,40 210,80 180,120 120,120 90,80" fill="none" stroke="#F8FAFC" stroke-width="3" opacity="0.7"/>
+      <polygon points="270,40 330,40 360,80 330,120 270,120 240,80" fill="none" stroke="#F8FAFC" stroke-width="3" opacity="0.7"/>
+      <polygon points="420,40 480,40 510,80 480,120 420,120 390,80" fill="none" stroke="#F8FAFC" stroke-width="3" opacity="0.7"/>
+      <polygon points="570,40 630,40 660,80 630,120 570,120 540,80" fill="none" stroke="#F8FAFC" stroke-width="3" opacity="0.7"/>
+
+      <!-- Hydraulic Service Lift -->
+      <rect x="180" y="360" width="380" height="15" fill="#EF4444"/>
+      <rect x="220" y="375" width="30" height="65" fill="#3F3F46"/>
+      <rect x="490" y="375" width="30" height="65" fill="#3F3F46"/>
+
+      <!-- Sleek GT Performance Coupe Silhouette on Lift -->
+      <g transform="translate(140, 200)">
+        <path d="M40 130 C90 120 140 100 200 60 C260 25 360 25 410 70 L460 110 C500 120 520 130 520 150 L20 150 C20 140 25 135 40 130 Z" fill="url(#carBody)" stroke="#DC2626" stroke-width="2.5"/>
+        <!-- Aerodynamic Rear Wing -->
+        <path d="M15 110 L60 105 L55 125 L15 125 Z" fill="#EF4444"/>
+        <line x1="25" y1="125" x2="25" y2="140" stroke="#EF4444" stroke-width="3"/>
+        <!-- Alloy Wheels & Brake Calipers -->
+        <circle cx="120" cy="150" r="38" fill="#18181B" stroke="#71717A" stroke-width="4"/>
+        <circle cx="120" cy="150" r="16" fill="#09090B"/>
+        <path d="M100 135 C115 125 135 125 140 135" fill="none" stroke="#EF4444" stroke-width="8"/>
+
+        <circle cx="430" cy="150" r="38" fill="#18181B" stroke="#71717A" stroke-width="4"/>
+        <circle cx="430" cy="150" r="16" fill="#09090B"/>
+        <path d="M410 135 C425 125 445 125 450 135" fill="none" stroke="#EF4444" stroke-width="8"/>
+        
+        <!-- Cabin Window Glass & Cockpit Roll Cage -->
+        <path d="M210 65 C260 38 340 38 385 75 L380 115 L190 115 Z" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5" opacity="0.9"/>
+      </g>
+    </g>
+
+    <!-- Telemetry & Diagnostic Strip -->
+    <g transform="translate(60, 540)">
+      <rect width="740" height="180" rx="10" fill="#0D0D10" stroke="#1F1F27"/>
+      <g transform="translate(40, 30)">
+        <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#F8FAFC">Live CAN-Bus Diagnostics</text>
+        <text x="0" y="55" font-family="-apple-system, sans-serif" font-size="13" fill="#A1A1AA">Real-time ignition timing, fuel rail pressure mapping, and carbon-ceramic thermal analysis.</text>
+        <text x="0" y="85" font-family="-apple-system, sans-serif" font-size="13" fill="#A1A1AA">Custom fleet servicing agreements &amp; private collectors vehicle storage.</text>
+        <text x="0" y="115" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#EF4444">BRAND IDENTITY, FLEET CAMPAIGN &amp; DIGITAL COLLATERAL SUITE</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="120" y="1020" font-family="-apple-system, sans-serif" font-size="13" fill="#52525B">Concept Project • Automotive Performance Branding &amp; Commercial Campaign Art Direction by Muhammad Ahsan Sagheer</text>
+  <text x="1800" y="1020" text-anchor="end" font-family="-apple-system, sans-serif" font-size="13" fill="#52525B">© 2026 APEX AUTO SERVICES • ALL DESIGN RIGHTS RESERVED</text>
+</svg>

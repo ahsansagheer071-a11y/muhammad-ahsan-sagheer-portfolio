@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="realtyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1115"/>
+      <stop offset="50%" stop-color="#151921"/>
+      <stop offset="100%" stop-color="#0B0D11"/>
+    </linearGradient>
+    <linearGradient id="champagneGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E3BE"/>
+      <stop offset="50%" stop-color="#D4B67C"/>
+      <stop offset="100%" stop-color="#A6874E"/>
+    </linearGradient>
+    <linearGradient id="glassPool" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E3A53"/>
+      <stop offset="50%" stop-color="#0A2435"/>
+      <stop offset="100%" stop-color="#04121B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#realtyBg)"/>
+
+  <!-- Architectural Compass Rose Line Work -->
+  <g opacity="0.08" stroke="#D4B67C" stroke-width="1">
+    <circle cx="1400" cy="540" r="380" fill="none"/>
+    <circle cx="1400" cy="540" r="260" fill="none"/>
+    <line x1="1400" y1="100" x2="1400" y2="980"/>
+    <line x1="960" y1="540" x2="1840" y2="540"/>
+  </g>
+
+  <!-- Top Header Navigation -->
+  <text x="120" y="90" font-family="'Cinzel', 'Playfair Display', Georgia, serif" font-size="28" font-weight="700" fill="#D4B67C" letter-spacing="8">NORTHLINE REALTY</text>
+  <text x="520" y="90" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#64748B" letter-spacing="4">PRIVATE CLIENT LUXURY PROPERTIES</text>
+  <text x="1800" y="90" text-anchor="end" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#64748B" letter-spacing="4">PROPERTY MARKETING SUITE</text>
+
+  <!-- Left Editorial Typography & Storytelling -->
+  <g transform="translate(120, 200)">
+    <rect x="0" y="0" width="180" height="32" rx="16" fill="#1C212B" stroke="#D4B67C" stroke-width="1"/>
+    <text x="90" y="21" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#D4B67C" letter-spacing="3">EXCLUSIVE LISTING</text>
+
+    <text x="0" y="110" font-family="'Cinzel', Georgia, serif" font-size="68" font-weight="800" fill="#F8FAFC" letter-spacing="1">
+      The Highland
+    </text>
+    <text x="0" y="180" font-family="'Cinzel', Georgia, serif" font-size="68" font-weight="800" fill="url(#champagneGold)" letter-spacing="1">
+      Pavilion.
+    </text>
+
+    <text x="0" y="250" font-family="-apple-system, sans-serif" font-size="20" font-weight="300" fill="#CBD5E1" line-height="30">
+      Aspen, Colorado • 9,400 Sq Ft Cantilevered Architecture
+    </text>
+
+    <text x="0" y="310" font-family="-apple-system, sans-serif" font-size="16" fill="#94A3B8" max-width="600" line-height="26">
+      A benchmark marketing brochure and digital campaign designed for ultra-high-net-worth real estate acquisition. Clean architectural typography, bespoke property editorial layouts, and panoramic dusk visuals.
+    </text>
+
+    <!-- Key Property Metrics Grid -->
+    <g transform="translate(0, 390)">
+      <g transform="translate(0, 0)">
+        <text x="0" y="32" font-family="'Cinzel', Georgia, serif" font-size="36" font-weight="700" fill="#F8FAFC">6</text>
+        <text x="0" y="58" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">En-Suite Bedrooms</text>
+      </g>
+      <g transform="translate(160, 0)">
+        <text x="0" y="32" font-family="'Cinzel', Georgia, serif" font-size="36" font-weight="700" fill="#D4B67C">8.5</text>
+        <text x="0" y="58" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">Spa Bathrooms</text>
+      </g>
+      <g transform="translate(320, 0)">
+        <text x="0" y="32" font-family="'Cinzel', Georgia, serif" font-size="36" font-weight="700" fill="#F8FAFC">4.2</text>
+        <text x="0" y="58" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">Private Forest Acres</text>
+      </g>
+      <g transform="translate(480, 0)">
+        <text x="0" y="32" font-family="'Cinzel', Georgia, serif" font-size="36" font-weight="700" fill="#D4B67C">$18.5M</text>
+        <text x="0" y="58" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">Offered Valuation</text>
+      </g>
+    </g>
+
+    <!-- CTA & Agent Contact -->
+    <g transform="translate(0, 500)">
+      <rect x="0" y="0" width="260" height="56" rx="28" fill="url(#champagneGold)"/>
+      <text x="130" y="35" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#0B0D11" letter-spacing="1">VIEW ACQUISITION DOSSIER</text>
+      <text x="290" y="35" font-family="-apple-system, sans-serif" font-size="14" fill="#64748B">Curated by Northline Advisory</text>
+    </g>
+  </g>
+
+  <!-- Right: Architectural Estate Illustration & Mockup Presentation -->
+  <g transform="translate(940, 180)">
+    <!-- Architectural Frame -->
+    <rect width="860" height="780" rx="16" fill="#12161E" stroke="#252D3D" stroke-width="2"/>
+    
+    <!-- Modern Glass Pavilion Artwork -->
+    <g transform="translate(60, 60)">
+      <!-- Dusk Sky Gradient -->
+      <rect width="740" height="420" rx="12" fill="#1A2230"/>
+      <!-- Mountain Ridge Silhouette -->
+      <path d="M0 240 L160 180 L320 220 L480 140 L640 190 L740 160 L740 420 L0 420 Z" fill="#10151E"/>
+      
+      <!-- Modern Cantilevered Glass Residence -->
+      <!-- Lower Stone Plinth -->
+      <rect x="120" y="270" width="500" height="90" fill="#2C3545" stroke="#3D4A5E"/>
+      <!-- Upper Glass Pavilion -->
+      <rect x="160" y="210" width="420" height="80" fill="#1C2C3D" stroke="#D4B67C" stroke-width="1.5" opacity="0.95"/>
+      <!-- Warm Interior Glow Lights -->
+      <rect x="180" y="225" width="80" height="50" fill="#E8B868" opacity="0.8"/>
+      <rect x="300" y="225" width="120" height="50" fill="#E8B868" opacity="0.7"/>
+      <rect x="460" y="225" width="80" height="50" fill="#E8B868" opacity="0.9"/>
+
+      <!-- Cantilever Overhang Roof Slab -->
+      <rect x="140" y="195" width="460" height="15" fill="#475569"/>
+
+      <!-- Infinity Pool Reflection -->
+      <polygon points="120,360 620,360 680,410 60,410" fill="url(#glassPool)"/>
+      <line x1="80" y1="385" x2="660" y2="385" stroke="#38BDF8" stroke-width="1.5" opacity="0.5"/>
+    </g>
+
+    <!-- Floor Plan Specimen Strip -->
+    <g transform="translate(60, 520)">
+      <rect width="740" height="200" rx="10" fill="#0B0E14" stroke="#1E2633"/>
+      
+      <!-- Mini Schematic Floorplan -->
+      <g transform="translate(40, 30)">
+        <rect x="0" y="0" width="180" height="140" fill="none" stroke="#D4B67C" stroke-width="1.5"/>
+        <line x1="60" y1="0" x2="60" y2="140" stroke="#334155"/>
+        <line x1="120" y1="0" x2="120" y2="90" stroke="#334155"/>
+        <line x1="0" y1="90" x2="180" y2="90" stroke="#334155"/>
+        <text x="30" y="50" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8">LIVING</text>
+        <text x="90" y="50" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8">DINING</text>
+        <text x="150" y="50" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8">KITCHEN</text>
+        <text x="90" y="120" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#D4B67C">TERRACE &amp; POOL</text>
+      </g>
+
+      <text x="260" y="65" font-family="'Cinzel', Georgia, serif" font-size="20" font-weight="700" fill="#F8FAFC">Architectural Specifications</text>
+      <text x="260" y="95" font-family="-apple-system, sans-serif" font-size="13" fill="#94A3B8">Dual cantilever floor plate engineering with triple-glazed acoustic glass walls.</text>
+      <text x="260" y="125" font-family="-apple-system, sans-serif" font-size="13" fill="#94A3B8">Geothermal radiant floor climate system &amp; integrated Crestron home automation.</text>
+      <text x="260" y="155" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#D4B67C">ARCHITECTURAL DESIGN &amp; BRAND MARKETING CAMPAIGN</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="120" y="1020" font-family="-apple-system, sans-serif" font-size="13" fill="#475569">Concept Project • Real Estate Branding &amp; Luxury Property Campaign Architecture by Muhammad Ahsan Sagheer</text>
+  <text x="1800" y="1020" text-anchor="end" font-family="-apple-system, sans-serif" font-size="13" fill="#475569">© 2026 NORTHLINE REALTY • ALL DESIGN RIGHTS RESERVED</text>
+</svg>

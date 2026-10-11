@@ -3,10 +3,21 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
 export const Hero = () => {
+  const handleSampleRequest = () => {
+    trackEvent("sample_creative_click", { location: "hero" });
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(
+        new CustomEvent("select-automation-service", {
+          detail: "Free Sample Creative",
+        })
+      );
+    }
+  };
+
   return (
     <section
       id="home"
@@ -24,7 +35,7 @@ export const Hero = () => {
         className="absolute inset-0 w-full md:w-[80%] lg:w-[65%] pointer-events-none z-0"
         style={{
           background:
-            "linear-gradient(to right, rgba(17, 17, 19, 0.98) 0%, rgba(17, 17, 19, 0.85) 45%, rgba(17, 17, 19, 0.4) 75%, rgba(17, 17, 19, 0) 100%)",
+            "linear-gradient(to right, rgba(17, 17, 19, 0.98) 0%, rgba(17, 17, 19, 0.88) 45%, rgba(17, 17, 19, 0.45) 75%, rgba(17, 17, 19, 0) 100%)",
         }}
         aria-hidden="true"
       />
@@ -81,11 +92,11 @@ export const Hero = () => {
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3.5 sm:gap-4">
               <a
                 href="#portfolio"
                 onClick={() => trackEvent("explore_work_click", { location: "hero" })}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#38BDF8] text-[#0A0A0C] font-bold text-sm hover:bg-[#7DD3FC] transition-all duration-200 group shadow-lg shadow-[#38BDF8]/20 cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-full bg-[#38BDF8] text-[#0A0A0C] font-bold text-sm hover:bg-[#7DD3FC] transition-all duration-200 group shadow-lg shadow-[#38BDF8]/20 cursor-pointer"
               >
                 <span>Explore Work</span>
                 <ArrowUpRight
@@ -96,8 +107,17 @@ export const Hero = () => {
 
               <a
                 href="#inquiry"
+                onClick={handleSampleRequest}
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#18181B]/95 backdrop-blur-sm border border-[#38BDF8]/40 text-[#F8FAFC] font-semibold text-sm hover:border-[#38BDF8] hover:text-[#38BDF8] transition-all duration-200 cursor-pointer shadow-md"
+              >
+                <Sparkles size={16} className="text-[#38BDF8]" />
+                <span>Request Free Sample Creative</span>
+              </a>
+
+              <a
+                href="#inquiry"
                 onClick={() => trackEvent("get_in_touch_click", { location: "hero" })}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#18181B]/90 backdrop-blur-sm border border-[#27272A] text-[#F8FAFC] font-medium text-sm hover:border-[#38BDF8] hover:text-[#38BDF8] transition-all duration-200 cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-transparent border border-[#27272A] text-[#A1A1AA] font-medium text-sm hover:border-[#38BDF8] hover:text-[#F8FAFC] transition-all duration-200 cursor-pointer"
               >
                 <span>Get in Touch</span>
               </a>

@@ -37,7 +37,21 @@ export const ProjectInquiryForm = () => {
       const serviceDetail = e.detail;
       if (serviceDetail) {
         trackEvent("inquiry_started", { source: serviceDetail });
-        if (serviceDetail.includes("Ecommerce")) {
+        if (serviceDetail.includes("Sample")) {
+          setFormData((prev) => ({
+            ...prev,
+            service: "Free Sample Creative",
+            automationCategory: "Free Sample Creative Request",
+            processImprovement: "Requested a free commercial creative / branding sample",
+          }));
+        } else if (serviceDetail.includes("Design") || serviceDetail.includes("Brand")) {
+          setFormData((prev) => ({
+            ...prev,
+            service: "Graphic Design & Branding",
+            automationCategory: serviceDetail,
+            processImprovement: `Focus area: ${serviceDetail}`,
+          }));
+        } else if (serviceDetail.includes("Ecommerce")) {
           setFormData((prev) => ({
             ...prev,
             service: "Ecommerce",
@@ -278,7 +292,9 @@ export const ProjectInquiryForm = () => {
                   }
                   className="w-full px-4 py-3 rounded-xl bg-[#111113] border border-[#27272A] text-sm text-[#F8FAFC] focus:outline-none focus:border-[#38BDF8] transition-colors cursor-pointer disabled:opacity-50"
                 >
-                  <option value="AI Automation">AI Automation & Workflow</option>
+                  <option value="Commercial Graphic Design & Branding">Commercial Graphic Design &amp; Branding</option>
+                  <option value="Free Sample Creative">Request a Free Sample Creative</option>
+                  <option value="AI Automation">AI Automation &amp; Workflow</option>
                   <option value="Web Development">Web Development / Modern Website</option>
                   <option value="SEO / Local SEO">SEO / Local SEO Optimization</option>
                   <option value="Ecommerce">Ecommerce System / Shopify</option>

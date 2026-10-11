@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="ecomBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0F12"/>
+      <stop offset="100%" stop-color="#08090B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#ecomBg)"/>
+
+  <!-- Top Navbar -->
+  <rect x="0" y="0" width="1920" height="85" fill="#14161C" stroke="#232733"/>
+  <text x="120" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="900" fill="#F8FAFC" letter-spacing="3">AURA // LIFESTYLE</text>
+  <text x="360" y="52" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">Apparel</text>
+  <text x="460" y="52" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">Audio Hardware</text>
+  <text x="610" y="52" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">Ceramics</text>
+  <text x="720" y="52" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">Editorial</text>
+
+  <text x="1800" y="52" text-anchor="end" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#38BDF8">CART (02) • $385.00</text>
+
+  <!-- Left: Product Image Gallery Grid -->
+  <g transform="translate(120, 140)">
+    <!-- Main Large Feature Photo Frame -->
+    <rect width="840" height="640" rx="14" fill="#181B22" stroke="#252A38"/>
+    <!-- Minimalist Product Rendering (Nordic Ceramic Table Lamp) -->
+    <circle cx="420" cy="320" r="180" fill="#202530"/>
+    <ellipse cx="420" cy="380" rx="140" ry="30" fill="#0C0E12" opacity="0.6"/>
+    <!-- Lamp Base & Shade Silhouette -->
+    <path d="M370 380 L470 380 L450 250 L390 250 Z" fill="#D4B67C"/>
+    <polygon points="320,250 520,250 480,140 360,140" fill="#F5EFEB"/>
+    <circle cx="420" cy="195" r="25" fill="#FFE2A4" opacity="0.6"/>
+
+    <text x="50" y="590" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#94A3B8" letter-spacing="2">STUDIO SHOT 01 // WARM LIGHT AMBIENCE</text>
+    
+    <!-- 3 Thumbnails below -->
+    <g transform="translate(0, 670)">
+      <rect x="0" y="0" width="260" height="170" rx="10" fill="#141720" stroke="#38BDF8" stroke-width="2"/>
+      <rect x="290" y="0" width="260" height="170" rx="10" fill="#141720" stroke="#252A38"/>
+      <rect x="580" y="0" width="260" height="170" rx="10" fill="#141720" stroke="#252A38"/>
+    </g>
+  </g>
+
+  <!-- Right: Product Purchase Details & Specs -->
+  <g transform="translate(1020, 140)">
+    <text x="0" y="30" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#38BDF8" letter-spacing="3">NEW ARRIVAL // LIVING SPACE</text>
+    <text x="0" y="85" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="900" fill="#F8FAFC">Nordic Travertine Table Lamp</text>
+    <text x="0" y="130" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="800" fill="#F8FAFC">$240.00 USD</text>
+    
+    <text x="0" y="180" font-family="-apple-system, sans-serif" font-size="15" fill="#94A3B8" max-width="700" line-height="24">
+      Hand-carved porous Roman travertine base with solid brushed brass fittings and a pleated linen shade. Features stepless rotary dimming and integrated warm LED module.
+    </text>
+
+    <!-- Color Variant Selectors -->
+    <g transform="translate(0, 240)">
+      <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#CBD5E1">MATERIAL FINISH: ROMAN TRAVERTINE</text>
+      <circle cx="20" cy="35" r="18" fill="#D4B67C" stroke="#38BDF8" stroke-width="2"/>
+      <circle cx="70" cy="35" r="18" fill="#18181B" stroke="#3F3F46"/>
+      <circle cx="120" cy="35" r="18" fill="#E2E8F0" stroke="#3F3F46"/>
+    </g>
+
+    <!-- Quantity & Add to Cart -->
+    <g transform="translate(0, 340)">
+      <rect x="0" y="0" width="120" height="56" rx="8" fill="#141720" stroke="#252A38"/>
+      <text x="60" y="35" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#F8FAFC">-   1   +</text>
+
+      <rect x="150" y="0" width="480" height="56" rx="28" fill="#38BDF8"/>
+      <text x="390" y="35" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#0A0F1D">ADD TO SHOPPING BAG</text>
+    </g>
+
+    <!-- Value Props Strip -->
+    <g transform="translate(0, 450)">
+      <rect width="780" height="150" rx="10" fill="#11141B" stroke="#1E232F"/>
+      <g transform="translate(40, 40)">
+        <text x="0" y="24" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#F8FAFC">✓ Free Insured Worldwide Delivery</text>
+        <text x="0" y="55" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#F8FAFC">✓ 30-Day Hassle-Free Trial &amp; Return</text>
+        <text x="0" y="85" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#F8FAFC">✓ 5-Year Comprehensive Warranty</text>
+      </g>
+    </g>
+
+    <!-- Technical Specs Accordion Preview -->
+    <g transform="translate(0, 630)">
+      <rect width="780" height="190" rx="10" fill="#11141B" stroke="#1E232F"/>
+      <text x="40" y="45" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#F8FAFC">Dimensions &amp; Electrical Architecture</text>
+      <text x="40" y="85" font-family="-apple-system, sans-serif" font-size="13" fill="#94A3B8">• Dimensions: 42cm H x 28cm W (Base: 14cm diameter)</text>
+      <text x="40" y="115" font-family="-apple-system, sans-serif" font-size="13" fill="#94A3B8">• Weight: 4.8 kg solid stone plinth</text>
+      <text x="40" y="145" font-family="-apple-system, sans-serif" font-size="13" fill="#94A3B8">• Luminous Flux: 800 Lumens • 2200K – 2700K Warm Dimming</text>
+    </g>
+  </g>
+</svg>

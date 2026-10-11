@@ -12,7 +12,10 @@ export type AnalyticsEvent =
   | "inquiry_submitted"
   | "free_audit_click"
   | "tell_me_workflow_click"
-  | "case_study_view";
+  | "case_study_view"
+  | "portfolio_filter_click"
+  | "free_sample_cta_click"
+  | "sample_creative_click";
 
 export function trackEvent(
   eventName: AnalyticsEvent,

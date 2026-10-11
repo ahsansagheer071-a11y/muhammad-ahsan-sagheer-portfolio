@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="novaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08090C"/>
+      <stop offset="50%" stop-color="#0E121A"/>
+      <stop offset="100%" stop-color="#060709"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="headphoneMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#384050"/>
+      <stop offset="50%" stop-color="#1A202C"/>
+      <stop offset="100%" stop-color="#0F141C"/>
+    </linearGradient>
+    <filter id="novaShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="30" stdDeviation="40" flood-color="#0284C7" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#novaBg)"/>
+
+  <!-- Background Acoustic Waveform Radial Lines -->
+  <g opacity="0.12" stroke="#38BDF8" stroke-width="1.5">
+    <circle cx="960" cy="540" r="280" fill="none" stroke-dasharray="6,8"/>
+    <circle cx="960" cy="540" r="380" fill="none" stroke-dasharray="8,12"/>
+    <circle cx="960" cy="540" r="480" fill="none" stroke-dasharray="12,16"/>
+    <circle cx="960" cy="540" r="580" fill="none" stroke-dasharray="16,24"/>
+  </g>
+
+  <!-- Top Header Navigation & Category -->
+  <text x="120" y="90" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900" fill="#F8FAFC" letter-spacing="6">NOVASOUND</text>
+  <text x="360" y="90" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#38BDF8" letter-spacing="4">APEX SERIES // MK-IV</text>
+  <text x="1800" y="90" text-anchor="end" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#64748B" letter-spacing="4">COMMERCIAL ADVERTISING CAMPAIGN</text>
+
+  <!-- Left: Bold Campaign Headline & Value Prop -->
+  <g transform="translate(120, 240)">
+    <rect x="0" y="0" width="160" height="34" rx="17" fill="#0C4A6E" stroke="#0284C7"/>
+    <text x="80" y="22" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="800" fill="#7DD3FC" letter-spacing="2">HYBRID ANC 48dB</text>
+
+    <text x="0" y="110" font-family="'Plus Jakarta Sans', sans-serif" font-size="76" font-weight="900" fill="#F8FAFC" letter-spacing="-2" line-height="0.95">
+      PURE
+    </text>
+    <text x="0" y="185" font-family="'Plus Jakarta Sans', sans-serif" font-size="76" font-weight="900" fill="#38BDF8" letter-spacing="-2">
+      ACOUSTIC
+    </text>
+    <text x="0" y="260" font-family="'Plus Jakarta Sans', sans-serif" font-size="76" font-weight="900" fill="#F8FAFC" letter-spacing="-2">
+      ISOLATION.
+    </text>
+
+    <text x="0" y="325" font-family="-apple-system, sans-serif" font-size="18" fill="#94A3B8" max-width="540">
+      Engineered with bespoke 40mm Beryllium acoustic drivers, loss-free LDAC streaming, and aerospace titanium articulation. Silence the world.
+    </text>
+
+    <!-- Key Spec Badges -->
+    <g transform="translate(0, 390)">
+      <g transform="translate(0, 0)">
+        <text x="0" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="36" font-weight="800" fill="#F8FAFC">55 HRS</text>
+        <text x="0" y="58" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#64748B">Ultra-Long Playback</text>
+      </g>
+      <g transform="translate(160, 0)">
+        <text x="0" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="36" font-weight="800" fill="#38BDF8">40 mm</text>
+        <text x="0" y="58" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#64748B">Beryllium Diaphragm</text>
+      </g>
+      <g transform="translate(340, 0)">
+        <text x="0" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="36" font-weight="800" fill="#F8FAFC">&lt; 0.05%</text>
+        <text x="0" y="58" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#64748B">THD Harmonic Distortion</text>
+      </g>
+    </g>
+
+    <!-- Buy Now & Product Code -->
+    <g transform="translate(0, 510)">
+      <rect x="0" y="0" width="220" height="56" rx="28" fill="#38BDF8"/>
+      <text x="110" y="35" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#08090C">EXPLORE APEX MK-IV</text>
+      <text x="250" y="35" font-family="monospace" font-size="14" fill="#64748B">MSRP $399.00 USD</text>
+    </g>
+  </g>
+
+  <!-- Center-Right: High-Fidelity Audiophile Headphone Illustration -->
+  <g transform="translate(1180, 520)" filter="url(#novaShadow)">
+    <!-- Cyan Ambient Halo -->
+    <circle cx="0" cy="0" r="320" fill="#0284C7" opacity="0.15"/>
+    <circle cx="0" cy="0" r="220" fill="#38BDF8" opacity="0.1"/>
+
+    <!-- Headband Arc -->
+    <path d="M-180 30 C-180 -220 180 -220 180 30" fill="none" stroke="url(#headphoneMetal)" stroke-width="36" stroke-linecap="round"/>
+    <path d="M-140 -80 C-140 -200 140 -200 140 -80" fill="none" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+    <!-- Headband Leather Cushion -->
+    <path d="M-120 -150 C-70 -190 70 -190 120 -150" fill="none" stroke="#0F172A" stroke-width="26" stroke-linecap="round"/>
+
+    <!-- Left Ear Cup Assembly -->
+    <g transform="translate(-180, 50)">
+      <!-- Gimbal Yoke -->
+      <path d="M0 -30 L-25 0 L-25 70 L25 70 L25 0 Z" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+      <!-- Outer Ear Cup Casing -->
+      <rect x="-60" y="10" width="120" height="170" rx="40" fill="url(#headphoneMetal)" stroke="#38BDF8" stroke-width="2.5"/>
+      <!-- Inner Acoustic Ring -->
+      <circle cx="0" cy="95" r="42" fill="#0A0F1D" stroke="#0284C7" stroke-width="2"/>
+      <!-- Laser Engraved Logo -->
+      <polygon points="0,75 -16,105 16,105" fill="#38BDF8"/>
+      <!-- Memory Foam Ear Cushion -->
+      <rect x="-80" y="20" width="30" height="150" rx="15" fill="#020617" stroke="#1E293B"/>
+    </g>
+
+    <!-- Right Ear Cup Assembly -->
+    <g transform="translate(180, 50)">
+      <path d="M0 -30 L-25 0 L-25 70 L25 70 L25 0 Z" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+      <rect x="-60" y="10" width="120" height="170" rx="40" fill="url(#headphoneMetal)" stroke="#38BDF8" stroke-width="2.5"/>
+      <circle cx="0" cy="95" r="42" fill="#0A0F1D" stroke="#0284C7" stroke-width="2"/>
+      <polygon points="0,75 -16,105 16,105" fill="#38BDF8"/>
+      <rect x="50" y="20" width="30" height="150" rx="15" fill="#020617" stroke="#1E293B"/>
+    </g>
+
+    <!-- Audio Frequency Pulse Ring -->
+    <circle cx="0" cy="95" r="300" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4,8" opacity="0.4"/>
+  </g>
+
+  <!-- Bottom Brand Footer -->
+  <text x="120" y="1020" font-family="-apple-system, sans-serif" font-size="13" fill="#475569">Concept Project • Creative Advertising &amp; Consumer Hardware Art Direction by Muhammad Ahsan Sagheer</text>
+  <text x="1800" y="1020" text-anchor="end" font-family="-apple-system, sans-serif" font-size="13" fill="#475569">© 2026 NOVASOUND AUDIO LABS • ALL RIGHTS RESERVED</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="embIdBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14110E"/>
+      <stop offset="100%" stop-color="#0E0C0A"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2A577"/>
+      <stop offset="50%" stop-color="#C86D3B"/>
+      <stop offset="100%" stop-color="#8F3F19"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#embIdBg)"/>
+
+  <!-- Header -->
+  <text x="120" y="90" font-family="'Cinzel', Georgia, serif" font-size="28" font-weight="700" fill="#F2A577" letter-spacing="8">EMBER BRAND IDENTITY GUIDELINES</text>
+  <text x="1800" y="90" text-anchor="end" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#8A7A6E" letter-spacing="4">DESIGN MANUAL &amp; ASSET SPECIFICATION</text>
+
+  <!-- Left: Grid of Identity Components -->
+  <g transform="translate(120, 150)">
+    <!-- Typography Specimen -->
+    <rect width="800" height="400" rx="14" fill="#1B1714" stroke="#38302A"/>
+    <text x="50" y="60" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#C86D3B" letter-spacing="3">PRIMARY TYPOGRAPHY SPECIMEN</text>
+    <text x="50" y="125" font-family="'Cinzel', Georgia, serif" font-size="44" font-weight="800" fill="#F5EFEB" letter-spacing="2">Cinzel Bold &amp; Decorative</text>
+    <text x="50" y="170" font-family="'Cinzel', Georgia, serif" font-size="22" fill="#E89B6C">ABCDEFGHIJKLMNOPQRSTUVWXYZ • 0123456789</text>
+    <line x1="50" y1="210" x2="750" y2="210" stroke="#2E2823"/>
+    <text x="50" y="250" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#C86D3B" letter-spacing="3">SECONDARY SANS-SERIF SPECIMEN</text>
+    <text x="50" y="295" font-family="-apple-system, sans-serif" font-size="28" font-weight="600" fill="#F5EFEB">Plus Jakarta Sans &amp; Inter Medium</text>
+    <text x="50" y="335" font-family="-apple-system, sans-serif" font-size="16" fill="#A89282">Crisp, highly legible editorial sans for packaging origin notes, brewing ratios, and cafe signage.</text>
+  </g>
+
+  <!-- Clearspace & Construction Grid -->
+  <g transform="translate(120, 580)">
+    <rect width="800" height="420" rx="14" fill="#1B1714" stroke="#38302A"/>
+    <text x="50" y="60" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#C86D3B" letter-spacing="3">MARK GEOMETRY &amp; PROPORTION RATIOS</text>
+    
+    <!-- Geometric Construction Diagram -->
+    <g transform="translate(180, 220)">
+      <circle cx="0" cy="0" r="100" fill="none" stroke="#4A3F37" stroke-dasharray="3,3"/>
+      <circle cx="0" cy="0" r="70" fill="none" stroke="#C86D3B" stroke-width="1.5"/>
+      <line x1="-120" y1="0" x2="120" y2="0" stroke="#4A3F37"/>
+      <line x1="0" y1="-120" x2="0" y2="120" stroke="#4A3F37"/>
+      <path d="M0 -55 C25 -20 38 25 0 55 C-38 25 -25 -20 0 -55 Z" fill="url(#copper)"/>
+      <circle cx="0" cy="15" r="14" fill="#1B1714"/>
+    </g>
+
+    <text x="360" y="160" font-family="'Cinzel', Georgia, serif" font-size="24" font-weight="700" fill="#F5EFEB">The Hearth Flame</text>
+    <text x="360" y="200" font-family="-apple-system, sans-serif" font-size="14" fill="#A89282" line-height="22">Constructed from concentric Fibonacci spirals representing roasting heat, botanical bean germination, and human warmth.</text>
+    <text x="360" y="270" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#C86D3B">Minimum Clearspace: 1.5x Flame Height</text>
+    <text x="360" y="300" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#C86D3B">Minimum Print Scale: 12mm</text>
+  </g>
+
+  <!-- Right: Stationery & Cafe Application Suite -->
+  <g transform="translate(960, 150)">
+    <rect width="840" height="850" rx="14" fill="#1B1714" stroke="#38302A"/>
+    <text x="60" y="60" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#C86D3B" letter-spacing="3">RETAIL &amp; CAFE TOUCHPOINTS</text>
+
+    <!-- Card 1: Letterpress Business Card -->
+    <g transform="translate(60, 100)">
+      <rect width="340" height="200" rx="8" fill="#12100E" stroke="#4A3F37"/>
+      <g transform="translate(50, 60)">
+        <circle cx="0" cy="0" r="18" fill="none" stroke="#C86D3B"/>
+        <path d="M0 -10 C5 -4 8 4 0 10 C-8 4 -5 -4 0 -10 Z" fill="url(#copper)"/>
+      </g>
+      <text x="80" y="60" font-family="'Cinzel', Georgia, serif" font-size="18" font-weight="800" fill="url(#copper)">EMBER</text>
+      <text x="80" y="76" font-family="-apple-system, sans-serif" font-size="8" fill="#A89282">ROASTERS CO.</text>
+      <text x="50" y="140" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#F5EFEB">Marcus Thorne</text>
+      <text x="50" y="160" font-family="-apple-system, sans-serif" font-size="10" fill="#8A7A6E">Head of Green Coffee Sourcing</text>
+      <text x="50" y="178" font-family="-apple-system, sans-serif" font-size="10" fill="#C86D3B">hello@embercoffee.com</text>
+    </g>
+
+    <!-- Card 2: Kraft Roaster Note Card -->
+    <g transform="translate(440, 100)">
+      <rect width="340" height="200" rx="8" fill="#8A5A38" stroke="#A86F45"/>
+      <text x="40" y="50" font-family="'Cinzel', Georgia, serif" font-size="16" font-weight="800" fill="#F5EFEB">CUPPING SCORE: 89.5</text>
+      <text x="40" y="80" font-family="-apple-system, sans-serif" font-size="11" fill="#F5EFEB">Roaster's Tasting Field Log</text>
+      <text x="40" y="115" font-family="-apple-system, sans-serif" font-size="12" fill="#2E1C0C" font-weight="600">"Exceptional clean floral tea-like body with pronounced Meyer lemon and white peach brightness."</text>
+      <text x="40" y="170" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#1C1006">BATCH #1042 • ROASTED IN OREGON</text>
+    </g>
+
+    <!-- Signage & Environmental Branding Graphic -->
+    <g transform="translate(60, 340)">
+      <rect width="720" height="450" rx="10" fill="#14110E" stroke="#38302A"/>
+      <!-- Cafe storefront awning graphic -->
+      <path d="M60 100 L660 100 L640 160 L80 160 Z" fill="#2A241F" stroke="#C86D3B" stroke-width="2"/>
+      <text x="360" y="142" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="28" font-weight="800" fill="#F5EFEB" letter-spacing="8">EMBER COFFEE</text>
+      <circle cx="360" cy="270" r="75" fill="#1F1A15" stroke="#E89B6C" stroke-width="2"/>
+      <text x="360" y="275" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="24" font-weight="800" fill="url(#copper)">EST. 2024</text>
+      <text x="360" y="390" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="14" fill="#A89282">Architectural Bronze Exterior Blade Sign Mockup</text>
+    </g>
+  </g>
+</svg>

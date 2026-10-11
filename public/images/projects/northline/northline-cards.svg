@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="nlCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1116"/>
+      <stop offset="100%" stop-color="#090B0E"/>
+    </linearGradient>
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E3BE"/>
+      <stop offset="100%" stop-color="#C5A059"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#nlCardBg)"/>
+
+  <!-- Header -->
+  <text x="120" y="90" font-family="'Cinzel', Georgia, serif" font-size="28" font-weight="700" fill="#D4B67C" letter-spacing="8">NORTHLINE DIGITAL ASSET SYSTEM</text>
+  <text x="1800" y="90" text-anchor="end" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#64748B" letter-spacing="4">MULTI-TOUCHPOINT PROPERTY COLLATERAL</text>
+
+  <!-- 3 Campaign Feature Cards -->
+  <!-- Card 1: Print Catalog Spread -->
+  <g transform="translate(120, 160)">
+    <rect width="520" height="780" rx="16" fill="#141822" stroke="#252F42"/>
+    <text x="40" y="60" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#D4B67C" letter-spacing="3">PRINT BROCHURE SPECIMEN</text>
+    <rect x="40" y="90" width="440" height="300" rx="10" fill="#1C2433"/>
+    <!-- Architecture silhouette -->
+    <rect x="70" y="140" width="380" height="180" fill="#2E3B52" rx="6"/>
+    <rect x="110" y="160" width="120" height="80" fill="#E8B868" opacity="0.7"/>
+    <text x="40" y="440" font-family="'Cinzel', Georgia, serif" font-size="32" font-weight="700" fill="#F8FAFC">Estate Dossier</text>
+    <text x="40" y="480" font-family="-apple-system, sans-serif" font-size="15" fill="#94A3B8" line-height="24">Heavyweight 350gsm silk stock brochure designed with copper-foil debossing and minimalist Swiss typography.</text>
+    <g transform="translate(40, 560)">
+      <text x="0" y="25" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#D4B67C">SPECIFICATIONS:</text>
+      <text x="0" y="55" font-family="-apple-system, sans-serif" font-size="14" fill="#CBD5E1">• 48-Page Bound Architectural Monograph</text>
+      <text x="0" y="85" font-family="-apple-system, sans-serif" font-size="14" fill="#CBD5E1">• High-Resolution Architectural Photography</text>
+      <text x="0" y="115" font-family="-apple-system, sans-serif" font-size="14" fill="#CBD5E1">• Custom Topographical Overlay Maps</text>
+    </g>
+  </g>
+
+  <!-- Card 2: Digital Listing Interface -->
+  <g transform="translate(700, 160)">
+    <rect width="520" height="780" rx="16" fill="#141822" stroke="#D4B67C" stroke-width="2"/>
+    <text x="40" y="60" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#D4B67C" letter-spacing="3">DIGITAL LISTING SHOWCASE</text>
+    <rect x="40" y="90" width="440" height="300" rx="10" fill="#0D111A" stroke="#252F42"/>
+    <!-- Modern Web UI Mockup -->
+    <rect x="60" y="110" width="400" height="40" rx="6" fill="#1A2130"/>
+    <text x="80" y="135" font-family="'Cinzel', Georgia, serif" font-size="14" font-weight="700" fill="#D4B67C">NORTHLINE // PRIVATE RETREATS</text>
+    <rect x="60" y="165" width="400" height="160" rx="6" fill="#243045"/>
+    <text x="40" y="440" font-family="'Cinzel', Georgia, serif" font-size="32" font-weight="700" fill="#F8FAFC">Interactive Web Portal</text>
+    <text x="40" y="480" font-family="-apple-system, sans-serif" font-size="15" fill="#94A3B8" line-height="24">Custom responsive web listing featuring 3D virtual walkthroughs, twilight photogalleries, and direct broker dispatch.</text>
+    <g transform="translate(40, 560)">
+      <text x="0" y="25" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#D4B67C">DIGITAL PERFORMANCE:</text>
+      <text x="0" y="55" font-family="-apple-system, sans-serif" font-size="14" fill="#CBD5E1">• Sub-Second Ultra HD Image Delivery</text>
+      <text x="0" y="85" font-family="-apple-system, sans-serif" font-size="14" fill="#CBD5E1">• High-Security Private Inquiry Vault</text>
+      <text x="0" y="115" font-family="-apple-system, sans-serif" font-size="14" fill="#CBD5E1">• Targeted International Social Display Ads</text>
+    </g>
+  </g>
+
+  <!-- Card 3: Social Media & Event Collateral -->
+  <g transform="translate(1280, 160)">
+    <rect width="520" height="780" rx="16" fill="#141822" stroke="#252F42"/>
+    <text x="40" y="60" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#D4B67C" letter-spacing="3">ACQUISITION EVENT INVITATION</text>
+    <rect x="40" y="90" width="440" height="300" rx="10" fill="#1C2433"/>
+    <!-- Invitation Card graphic -->
+    <rect x="80" y="125" width="360" height="230" rx="8" fill="#0B0E14" stroke="#D4B67C"/>
+    <text x="260" y="180" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="18" font-weight="800" fill="#D4B67C" letter-spacing="3">PRIVATE PREVIEW</text>
+    <text x="260" y="210" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#E2E8F0">By Exclusive Invitation Only</text>
+    <text x="260" y="260" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#94A3B8">NORTHLINE REAL ESTATE ADVISORY</text>
+    <text x="40" y="440" font-family="'Cinzel', Georgia, serif" font-size="32" font-weight="700" fill="#F8FAFC">VIP Engagement Suite</text>
+    <text x="40" y="480" font-family="-apple-system, sans-serif" font-size="15" fill="#94A3B8" line-height="24">Multi-channel campaign strategy driving qualified buyer attendance through invitation-only twilight receptions.</text>
+    <g transform="translate(40, 560)">
+      <text x="0" y="25" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#D4B67C">CAMPAIGN REACH:</text>
+      <text x="0" y="55" font-family="-apple-system, sans-serif" font-size="14" fill="#CBD5E1">• Targeted Financial District Placements</text>
+      <text x="0" y="85" font-family="-apple-system, sans-serif" font-size="14" fill="#CBD5E1">• High-Net-Worth Editorial Publications</text>
+      <text x="0" y="115" font-family="-apple-system, sans-serif" font-size="14" fill="#CBD5E1">• Unified Brand Aesthetics Across Print &amp; Web</text>
+    </g>
+  </g>
+</svg>

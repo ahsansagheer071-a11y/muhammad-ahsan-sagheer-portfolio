@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090a0f"/>
+      <stop offset="50%" stop-color="#11131c"/>
+      <stop offset="100%" stop-color="#0c0d14"/>
+    </linearGradient>
+    <linearGradient id="clickupPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7B68EE"/>
+      <stop offset="100%" stop-color="#4935B6"/>
+    </linearGradient>
+    <linearGradient id="clickupPink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF5722"/>
+      <stop offset="100%" stop-color="#E91E63"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1C1F2B"/>
+      <stop offset="100%" stop-color="#13151E"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <path d="M 0,140 L 1920,140 M 0,280 L 1920,280 M 0,420 L 1920,420 M 0,560 L 1920,560 M 0,700 L 1920,700 M 0,840 L 1920,840 M 0,980 L 1920,980"/>
+    <path d="M 280,0 L 280,1080 M 560,0 L 560,1080 M 840,0 L 840,1080 M 1120,0 L 1120,1080 M 1400,0 L 1400,1080 M 1680,0 L 1680,1080"/>
+  </g>
+
+  <!-- Header -->
+  <g transform="translate(100, 70)">
+    <rect width="40" height="40" rx="10" fill="url(#clickupPurple)"/>
+    <path d="M 115,95 L 120,90 L 125,95" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <text x="60" y="26" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="24" font-weight="800" letter-spacing="1">CLICKUP ENTERPRISE INTAKE &amp; DISPATCH WORKFLOW</text>
+    <text x="60" y="50" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="14" font-weight="500">Automated Client Brief Ingestion, Custom Field Mapping &amp; Asset Folder Provisioning</text>
+    <rect x="1460" y="10" width="260" height="36" rx="18" fill="#2E1065" stroke="#7C3AED" stroke-width="1"/>
+    <circle cx="1480" cy="28" r="6" fill="#A855F7"/>
+    <text x="1496" y="33" fill="#D8B4FE" font-family="'Inter', sans-serif" font-size="13" font-weight="700" letter-spacing="0.5">CLICKUP v3 API COMPLIANT</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M 450,440 L 580,440" stroke="#7B68EE" stroke-width="3" stroke-dasharray="6 6"/>
+  <path d="M 960,440 L 1090,440" stroke="#7B68EE" stroke-width="3" stroke-dasharray="6 6"/>
+  <path d="M 1470,440 L 1580,440" stroke="#10B981" stroke-width="3"/>
+
+  <!-- Column 1: Client Brief Intake -->
+  <g transform="translate(100, 210)" filter="url(#cardShadow)">
+    <rect width="350" height="560" rx="16" fill="url(#cardGrad)" stroke="#33384B" stroke-width="1.5"/>
+    <rect width="350" height="60" rx="16" fill="#181B26"/>
+    <rect x="0" y="50" width="350" height="10" fill="#181B26"/>
+    <text x="24" y="36" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="16" font-weight="700">01. INTAKE TRIGGER</text>
+
+    <!-- Form block -->
+    <rect x="24" y="85" width="302" height="135" rx="10" fill="#0D0F17" stroke="#252A3B"/>
+    <text x="44" y="115" fill="#A78BFA" font-family="'Inter', sans-serif" font-size="12" font-weight="600">INPUT SOURCE</text>
+    <text x="44" y="140" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="16" font-weight="700">Typeform / Webhook Portal</text>
+    <text x="44" y="165" fill="#64748B" font-family="'Inter', sans-serif" font-size="12">Structured Client Brief Submission</text>
+    <text x="44" y="195" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11">POST /api/webhooks/brief-intake</text>
+
+    <!-- Raw Payload Preview -->
+    <rect x="24" y="240" width="302" height="285" rx="10" fill="#0D0F17" stroke="#252A3B"/>
+    <text x="44" y="270" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">NORMALIZED JSON BRIEF</text>
+    <g font-family="'JetBrains Mono', monospace" font-size="11" fill="#CBD5E1">
+      <text x="44" y="300" fill="#7DD3FC">{</text>
+      <text x="56" y="325">&quot;client_id&quot;: &quot;CL_9024_NEXUS&quot;,</text>
+      <text x="56" y="350">&quot;tier&quot;: &quot;Enterprise Retainer&quot;,</text>
+      <text x="56" y="375">&quot;deliverables&quot;: [</text>
+      <text x="70" y="400">&quot;Ad Creatives (3)&quot;,</text>
+      <text x="70" y="425">&quot;Landing Page Mockup&quot;</text>
+      <text x="56" y="450">],</text>
+      <text x="56" y="475">&quot;deadline&quot;: &quot;2026-10-24T18:00Z&quot;</text>
+      <text x="44" y="500" fill="#7DD3FC">}</text>
+    </g>
+  </g>
+
+  <!-- Column 2: Parser & Custom Field Mapper -->
+  <g transform="translate(600, 190)" filter="url(#cardShadow)">
+    <rect width="360" height="600" rx="16" fill="url(#cardGrad)" stroke="#7C3AED" stroke-width="2"/>
+    <rect width="360" height="60" rx="16" fill="#4C1D95" fill-opacity="0.3"/>
+    <rect x="0" y="50" width="360" height="10" fill="#4C1D95" fill-opacity="0.3"/>
+    <text x="24" y="36" fill="#C4B5FD" font-family="'Inter', sans-serif" font-size="16" font-weight="800">02. WORKFLOW ROUTING ENGINE</text>
+
+    <!-- Custom Fields Mapping Box -->
+    <rect x="24" y="85" width="312" height="180" rx="10" fill="#0D0F17" stroke="#252A3B"/>
+    <text x="44" y="115" fill="#A78BFA" font-family="'Inter', sans-serif" font-size="12" font-weight="700">CLICKUP CUSTOM FIELDS MAPPING</text>
+
+    <g font-family="'Inter', sans-serif" font-size="12">
+      <rect x="44" y="130" width="272" height="32" rx="6" fill="#1E2333"/>
+      <text x="56" y="151" fill="#94A3B8">Target Persona:</text>
+      <text x="160" y="151" fill="#38BDF8" font-weight="600">B2B SaaS Founders</text>
+
+      <rect x="44" y="170" width="272" height="32" rx="6" fill="#1E2333"/>
+      <text x="56" y="191" fill="#94A3B8">Asset Dimensions:</text>
+      <text x="175" y="191" fill="#34D399" font-weight="600">1080x1080 • 1920x1080</text>
+
+      <rect x="44" y="210" width="272" height="32" rx="6" fill="#1E2333"/>
+      <text x="56" y="231" fill="#94A3B8">Priority Score:</text>
+      <text x="160" y="231" fill="#F43F5E" font-weight="700">P1 - Urgent High Tier</text>
+    </g>
+
+    <!-- Automated Workload Allocation -->
+    <rect x="24" y="285" width="312" height="160" rx="10" fill="#0D0F17" stroke="#252A3B"/>
+    <text x="44" y="315" fill="#A78BFA" font-family="'Inter', sans-serif" font-size="12" font-weight="700">CAPACITY-BASED ASSIGNEE</text>
+    <rect x="44" y="330" width="272" height="50" rx="6" fill="#14213d" stroke="#1D4ED8"/>
+    <text x="56" y="352" fill="#93C5FD" font-family="'Inter', sans-serif" font-size="12" font-weight="700">Lead Designer Assigned</text>
+    <text x="56" y="370" fill="#60A5FA" font-family="'Inter', sans-serif" font-size="11">Current sprint load: 45% (Available)</text>
+
+    <text x="44" y="405" fill="#10B981" font-family="'Inter', sans-serif" font-size="12" font-weight="600">✓ Auto-calculated estimation: 6.5 hours</text>
+    <text x="44" y="428" fill="#10B981" font-family="'Inter', sans-serif" font-size="12" font-weight="600">✓ Checklist subtasks generated: 5 items</text>
+
+    <!-- Drive Folder Provisioning -->
+    <rect x="24" y="465" width="312" height="105" rx="10" fill="#0D0F17" stroke="#252A3B"/>
+    <text x="44" y="495" fill="#A78BFA" font-family="'Inter', sans-serif" font-size="12" font-weight="700">ASSET DRIVE PROVISIONING</text>
+    <text x="44" y="525" fill="#CBD5E1" font-family="'Inter', sans-serif" font-size="12">Google Workspace Folder Created:</text>
+    <text x="44" y="550" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11">/Clients/Nexus/2026-Q4-AdCampaign/</text>
+  </g>
+
+  <!-- Column 3: ClickUp Workspace View -->
+  <g transform="translate(1110, 210)" filter="url(#cardShadow)">
+    <rect width="360" height="560" rx="16" fill="url(#cardGrad)" stroke="#33384B" stroke-width="1.5"/>
+    <rect width="360" height="60" rx="16" fill="#181B26"/>
+    <rect x="0" y="50" width="360" height="10" fill="#181B26"/>
+    <text x="24" y="36" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="16" font-weight="700">03. CLICKUP BOARD SYNC</text>
+
+    <!-- Task Card -->
+    <rect x="24" y="85" width="312" height="235" rx="10" fill="#0F121C" stroke="#252A3B"/>
+    <rect x="40" y="105" width="80" height="24" rx="12" fill="#7C3AED"/>
+    <text x="54" y="121" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="700">IN PROGRESS</text>
+    <text x="40" y="155" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="16" font-weight="700">Q4 Commercial Ad Creative Set</text>
+    <text x="40" y="180" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">Task ID: #CU-8692p3q1</text>
+
+    <!-- Task checklist -->
+    <g font-family="'Inter', sans-serif" font-size="12" fill="#CBD5E1">
+      <text x="40" y="215" fill="#10B981">☑ Ingest brand guidelines &amp; typography</text>
+      <text x="40" y="240" fill="#10B981">☑ Concept 3 high-impact banner drafts</text>
+      <text x="40" y="265" fill="#E2E8F0">☐ Internal review &amp; export 4K assets</text>
+      <text x="40" y="290" fill="#E2E8F0">☐ Client review portal dispatch</text>
+    </g>
+
+    <!-- Slack & Notifications -->
+    <rect x="24" y="340" width="312" height="185" rx="10" fill="#0F121C" stroke="#252A3B"/>
+    <text x="44" y="370" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">SLACK INTEGRATION PING</text>
+    <rect x="40" y="385" width="280" height="120" rx="8" fill="#1A1D27" stroke="#33384B"/>
+    <text x="56" y="410" fill="#38BDF8" font-family="'Inter', sans-serif" font-size="12" font-weight="700">#ops-creative-alerts</text>
+    <text x="56" y="432" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="12">🚀 New brief provisioned: Nexus</text>
+    <text x="56" y="452" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">Task #CU-8692p3q1 assigned. Assets folder ready.</text>
+    <rect x="56" y="468" width="100" height="24" rx="4" fill="#2563EB"/>
+    <text x="74" y="484" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Open Task →</text>
+  </g>
+
+  <!-- Column 4: Efficiency Metrics -->
+  <g transform="translate(1520, 210)" filter="url(#cardShadow)">
+    <rect width="300" height="560" rx="16" fill="url(#cardGrad)" stroke="#10B981" stroke-width="1.5"/>
+    <rect width="300" height="60" rx="16" fill="#064E3B" fill-opacity="0.3"/>
+    <rect x="0" y="50" width="300" height="10" fill="#064E3B" fill-opacity="0.3"/>
+    <text x="24" y="36" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="16" font-weight="700">04. OPERATIONAL GAINS</text>
+
+    <!-- Stat 1 -->
+    <rect x="20" y="85" width="260" height="95" rx="10" fill="#0F121C" stroke="#252A3B"/>
+    <text x="36" y="115" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">INTAKE PROVISION TIME</text>
+    <text x="36" y="150" fill="#38BDF8" font-family="'Inter', sans-serif" font-size="30" font-weight="800">4.2 sec</text>
+    <text x="36" y="170" fill="#10B981" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Down from 25 min manually</text>
+
+    <!-- Stat 2 -->
+    <rect x="20" y="200" width="260" height="95" rx="10" fill="#0F121C" stroke="#252A3B"/>
+    <text x="36" y="230" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">ONBOARDING VELOCITY</text>
+    <text x="36" y="265" fill="#A855F7" font-family="'Inter', sans-serif" font-size="30" font-weight="800">4.8x</text>
+    <text x="36" y="285" fill="#C084FC" font-family="'Inter', sans-serif" font-size="11">Faster project kickoff</text>
+
+    <!-- Stat 3 -->
+    <rect x="20" y="315" width="260" height="95" rx="10" fill="#0F121C" stroke="#252A3B"/>
+    <text x="36" y="345" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">DATA LOSS &amp; MISCOMMUNICATION</text>
+    <text x="36" y="380" fill="#10B981" font-family="'Inter', sans-serif" font-size="30" font-weight="800">0%</text>
+    <text x="36" y="400" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">Strict validation schemas</text>
+
+    <!-- Stat 4 -->
+    <rect x="20" y="430" width="260" height="95" rx="10" fill="#0F121C" stroke="#252A3B"/>
+    <text x="36" y="460" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">ANNUAL ADMIN SAVED</text>
+    <text x="36" y="495" fill="#F59E0B" font-family="'Inter', sans-serif" font-size="28" font-weight="800">340+ hrs</text>
+    <text x="36" y="515" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">Eliminated manual entry</text>
+  </g>
+
+  <!-- Bottom Details Bar -->
+  <g transform="translate(100, 930)">
+    <rect width="1720" height="60" rx="12" fill="#12141A" stroke="#262B35"/>
+    <text x="30" y="36" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="14" font-weight="600">INTEGRATION ENGINE:</text>
+    <text x="190" y="36" fill="#A855F7" font-family="'JetBrains Mono', monospace" font-size="13">ClickUp REST API v2/v3 • Make.com / n8n Webhook Architecture • Google Workspace Drive API • Slack Webhooks</text>
+  </g>
+</svg>

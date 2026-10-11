@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Menu, X } from "lucide-react";
+import { PORTFOLIO_DATA } from "@/data/portfolioData";
 
 // MAS Monogram — inline SVG, crisp at all sizes, no gradients/glow
 const MASMonogram = () => (
@@ -96,7 +97,7 @@ export const Navbar = () => {
             >
               <span>Portfolio</span>
               <span className="text-[11px] font-semibold text-[#38BDF8] px-1.5 py-0.5 bg-[#38BDF8]/10 rounded border border-[#38BDF8]/20">
-                08
+                {PORTFOLIO_DATA.featuredProjects.length.toString().padStart(2, "0")}
               </span>
             </a>
             <a
@@ -136,7 +137,9 @@ export const Navbar = () => {
               className="text-[#A1A1AA] hover:text-[#F8FAFC] py-1 flex items-center justify-between"
             >
               <span>Portfolio</span>
-              <span className="text-xs text-[#38BDF8] px-2 py-0.5 bg-[#38BDF8]/10 rounded">08</span>
+              <span className="text-xs text-[#38BDF8] px-2 py-0.5 bg-[#38BDF8]/10 rounded">
+                {PORTFOLIO_DATA.featuredProjects.length.toString().padStart(2, "0")}
+              </span>
             </a>
             <a
               href="#about"

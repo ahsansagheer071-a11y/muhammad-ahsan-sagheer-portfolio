@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="emberBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12100E"/>
+      <stop offset="50%" stop-color="#1A1613"/>
+      <stop offset="100%" stop-color="#0E0C0A"/>
+    </linearGradient>
+    <linearGradient id="copperFoil" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E89B6C"/>
+      <stop offset="50%" stop-color="#C86D3B"/>
+      <stop offset="100%" stop-color="#8F3F19"/>
+    </linearGradient>
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#24201C"/>
+      <stop offset="100%" stop-color="#151310"/>
+    </linearGradient>
+    <filter id="emberShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#emberBg)"/>
+
+  <!-- Subtle Top Decorative Grid -->
+  <g opacity="0.06" stroke="#E89B6C" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="1080"/>
+    <line x1="960" y1="0" x2="960" y2="1080"/>
+    <line x1="1820" y1="0" x2="1820" y2="1080"/>
+    <circle cx="960" cy="540" r="420" fill="none"/>
+  </g>
+
+  <!-- Header -->
+  <text x="120" y="90" font-family="'Cinzel', Georgia, serif" font-size="28" font-weight="700" fill="#E89B6C" letter-spacing="8">EMBER COFFEE ROASTERS</text>
+  <text x="1920" y="90" text-anchor="end" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#8A7A6E" letter-spacing="4" transform="translate(-120, 0)">PACKAGING ARCHITECTURE &amp; BRAND SYSTEM</text>
+
+  <!-- Left: Packaging Bag Mockup (Matte Black with Copper Foil) -->
+  <g transform="translate(140, 160)" filter="url(#emberShadow)">
+    <!-- Bag Silhouette -->
+    <path d="M120 40 L600 40 L640 100 L620 740 L100 740 L80 100 Z" fill="url(#bagGrad)" stroke="#38302A" stroke-width="2"/>
+    <!-- Fold Highlights -->
+    <path d="M120 40 L360 40 L340 740 L100 740 Z" fill="#2E2823" opacity="0.4"/>
+    <!-- Top Seal Heat Crimp -->
+    <rect x="110" y="40" width="500" height="25" fill="#1C1814" stroke="#4A3F37" stroke-width="1"/>
+    <line x1="110" y1="52" x2="610" y2="52" stroke="#E89B6C" stroke-width="1" stroke-dasharray="4,4" opacity="0.6"/>
+
+    <!-- Central Copper Foil Label -->
+    <g transform="translate(170, 140)">
+      <rect width="380" height="520" rx="10" fill="#181512" stroke="#C86D3B" stroke-width="1.5"/>
+      
+      <!-- Brand Flame Monogram Logo -->
+      <g transform="translate(190, 80)">
+        <circle cx="0" cy="0" r="38" fill="#241E18" stroke="#E89B6C" stroke-width="1.5"/>
+        <path d="M0 -22 C12 -8 18 10 0 24 C-18 10 -12 -8 0 -22 Z" fill="url(#copperFoil)"/>
+        <circle cx="0" cy="6" r="6" fill="#181512"/>
+      </g>
+
+      <text x="190" y="165" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="34" font-weight="800" fill="url(#copperFoil)" letter-spacing="6">EMBER</text>
+      <text x="190" y="195" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#A89282" letter-spacing="4">SPECIALTY COFFEE ROASTERS</text>
+      
+      <line x1="60" y1="225" x2="320" y2="225" stroke="#4A3F37" stroke-width="1"/>
+
+      <!-- Single Origin Specs -->
+      <text x="60" y="270" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#E89B6C" letter-spacing="2">SINGLE ORIGIN LOT #42</text>
+      <text x="60" y="305" font-family="'Cinzel', Georgia, serif" font-size="24" font-weight="700" fill="#F5EFEB">Yirgacheffe, Ethiopia</text>
+      <text x="60" y="340" font-family="-apple-system, sans-serif" font-size="13" fill="#A89282">Altitude: 2,100 MASL • Natural Anaerobic Process</text>
+      
+      <!-- Tasting Notes Pills -->
+      <g transform="translate(60, 370)">
+        <rect x="0" y="0" width="75" height="26" rx="13" fill="#2A221B" stroke="#664630"/>
+        <text x="37" y="17" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#E89B6C">Jasmine</text>
+
+        <rect x="85" y="0" width="85" height="26" rx="13" fill="#2A221B" stroke="#664630"/>
+        <text x="127" y="17" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#E89B6C">Bergamot</text>
+
+        <rect x="180" y="0" width="85" height="26" rx="13" fill="#2A221B" stroke="#664630"/>
+        <text x="222" y="17" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#E89B6C">Dark Fig</text>
+      </g>
+
+      <!-- Weight & Valve badge -->
+      <g transform="translate(60, 440)">
+        <text x="0" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#EFE8E2">WHOLE BEAN</text>
+        <text x="260" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#C86D3B">250G / 8.8 OZ</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right: Identity System, Typography & Collateral -->
+  <g transform="translate(880, 160)" filter="url(#emberShadow)">
+    <rect width="900" height="780" rx="16" fill="#1A1613" stroke="#38302A" stroke-width="1.5"/>
+
+    <!-- Section 1: Logo Suite -->
+    <g transform="translate(60, 60)">
+      <text x="0" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#E89B6C" letter-spacing="3">BRAND MARKS &amp; LOGO SYSTEM</text>
+      
+      <!-- Primary Mark Box -->
+      <rect x="0" y="45" width="360" height="150" rx="10" fill="#12100E" stroke="#38302A"/>
+      <g transform="translate(70, 120)">
+        <circle cx="0" cy="0" r="28" fill="#241E18" stroke="#E89B6C"/>
+        <path d="M0 -16 C8 -6 12 6 0 16 C-12 6 -8 -6 0 -16 Z" fill="url(#copperFoil)"/>
+      </g>
+      <text x="120" y="115" font-family="'Cinzel', Georgia, serif" font-size="28" font-weight="800" fill="url(#copperFoil)" letter-spacing="4">EMBER</text>
+      <text x="120" y="135" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#8A7A6E" letter-spacing="2">ROASTERS CO.</text>
+
+      <!-- Secondary Monogram Box -->
+      <rect x="400" y="45" width="360" height="150" rx="10" fill="#12100E" stroke="#38302A"/>
+      <text x="580" y="105" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="48" font-weight="800" fill="#F5EFEB" letter-spacing="8">E • M • B • E • R</text>
+      <text x="580" y="135" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#A89282" letter-spacing="4">EST. 2024 • ARTISANAL SMALL BATCH</text>
+    </g>
+
+    <!-- Section 2: Takeaway Cup Sleeve & Menu Collateral -->
+    <g transform="translate(60, 290)">
+      <text x="0" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#E89B6C" letter-spacing="3">COLLATERAL &amp; PACKAGING EXTENSION</text>
+      
+      <!-- Cup Mockup Graphic -->
+      <g transform="translate(0, 45)">
+        <rect width="360" height="200" rx="10" fill="#12100E" stroke="#38302A"/>
+        <path d="M120 30 L240 30 L225 170 L135 170 Z" fill="#2E2823" stroke="#4A3F37"/>
+        <!-- Kraft Sleeve -->
+        <path d="M125 75 L235 75 L230 135 L130 135 Z" fill="#8F5933"/>
+        <text x="180" y="110" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="14" font-weight="800" fill="#F5EFEB" letter-spacing="2">EMBER</text>
+        <text x="180" y="185" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#A89282">12oz Ceramic Matte Cup</text>
+      </g>
+
+      <!-- Cafe Menu Board Graphic -->
+      <g transform="translate(400, 45)">
+        <rect width="360" height="200" rx="10" fill="#12100E" stroke="#38302A"/>
+        <text x="30" y="45" font-family="'Cinzel', Georgia, serif" font-size="16" font-weight="700" fill="#E89B6C">Espresso Bar Menu</text>
+        <text x="30" y="80" font-family="-apple-system, sans-serif" font-size="13" fill="#F5EFEB">Double Cortado</text>
+        <text x="330" y="80" text-anchor="end" font-family="-apple-system, sans-serif" font-size="13" fill="#E89B6C">$4.50</text>
+        <text x="30" y="115" font-family="-apple-system, sans-serif" font-size="13" fill="#F5EFEB">Single Origin V60 Pour</text>
+        <text x="330" y="115" text-anchor="end" font-family="-apple-system, sans-serif" font-size="13" fill="#E89B6C">$6.00</text>
+        <text x="30" y="150" font-family="-apple-system, sans-serif" font-size="13" fill="#F5EFEB">Cascara Botanical Tonic</text>
+        <text x="330" y="150" text-anchor="end" font-family="-apple-system, sans-serif" font-size="13" fill="#E89B6C">$5.50</text>
+      </g>
+    </g>
+
+    <!-- Section 3: Brand Color Palette -->
+    <g transform="translate(60, 580)">
+      <text x="0" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#E89B6C" letter-spacing="3">BRAND SYSTEM COLOR PALETTE</text>
+      <g transform="translate(0, 45)">
+        <rect x="0" y="0" width="140" height="65" rx="8" fill="#12100E" stroke="#38302A"/>
+        <text x="70" y="38" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#F5EFEB">#12100E</text>
+
+        <rect x="155" y="0" width="140" height="65" rx="8" fill="#C86D3B"/>
+        <text x="225" y="38" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#12100E">#C86D3B</text>
+
+        <rect x="310" y="0" width="140" height="65" rx="8" fill="#E89B6C"/>
+        <text x="380" y="38" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#12100E">#E89B6C</text>
+
+        <rect x="465" y="0" width="140" height="65" rx="8" fill="#8F5933"/>
+        <text x="535" y="38" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#F5EFEB">#8F5933</text>
+
+        <rect x="620" y="0" width="140" height="65" rx="8" fill="#F5EFEB"/>
+        <text x="690" y="38" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#12100E">#F5EFEB</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Label -->
+  <text x="120" y="1020" font-family="-apple-system, sans-serif" font-size="13" fill="#6B5D53">Concept Project • Brand Identity &amp; Packaging Design by Muhammad Ahsan Sagheer</text>
+  <text x="1920" y="1020" text-anchor="end" font-family="-apple-system, sans-serif" font-size="13" fill="#6B5D53" transform="translate(-120, 0)">© 2026 EMBER COFFEE • ALL DESIGN RIGHTS RESERVED</text>
+</svg>

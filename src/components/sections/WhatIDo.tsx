@@ -6,7 +6,7 @@ import { PORTFOLIO_DATA } from "@/data/portfolioData";
 import { Bot, Globe, Search, Palette, ArrowUpRight } from "lucide-react";
 
 export const WhatIDo = () => {
-  const serviceIcons = [Bot, Globe, Search, Palette];
+  const serviceIcons = [Palette, Globe, Bot, Search];
 
   return (
     <section id="services" className="w-full py-24 md:py-32 bg-[#111113] border-t border-[#27272A]/40">

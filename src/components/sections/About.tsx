@@ -71,7 +71,7 @@ export const About = () => {
                   <Cpu size={24} />
                 </div>
                 <span className="text-xs font-mono uppercase tracking-widest text-[#71717A]">
-                  [SYSTEM // ARCHITECTURE]
+                  [DESIGN // CODE // AUTOMATION]
                 </span>
               </div>
 
@@ -88,7 +88,7 @@ export const About = () => {
                 <div>
                   <h4 className="text-sm font-semibold text-[#F8FAFC]">Engineered for Growth</h4>
                   <p className="text-xs text-[#A1A1AA] mt-1 max-w-[220px]">
-                    Autonomous automations, modern web stacks & search performance.
+                    Commercial brand design, scalable web platforms &amp; autonomous AI workflows.
                   </p>
                 </div>
               </div>
@@ -97,9 +97,9 @@ export const About = () => {
               <div className="flex items-center justify-between text-[11px] text-[#A1A1AA] pt-4 border-t border-[#27272A]/80 z-10">
                 <span className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8]"></span>
-                  Modern Stack
+                  Multidisciplinary
                 </span>
-                <span className="font-mono text-[#71717A]">Next.js / Python / AI</span>
+                <span className="font-mono text-[#71717A]">Design / Next.js / AI</span>
               </div>
             </div>
           </motion.div>

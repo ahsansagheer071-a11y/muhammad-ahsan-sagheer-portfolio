@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PROJECTS_DATA } from "@/data/projectsData";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
+import { ProjectGallery } from "@/components/projects/ProjectGallery";
 import {
   ArrowLeft,
   ArrowRight,
@@ -378,44 +379,9 @@ export default async function ProjectCaseStudyPage({ params }: ProjectPageProps)
 
         </div>
 
-        {/* Visual Gallery */}
+        {/* Visual Gallery with Interactive Lightbox */}
         {project.gallery && project.gallery.length > 0 && (
-          <section className="space-y-6">
-            <div className="flex items-center gap-2 text-[#38BDF8] text-xs font-mono uppercase tracking-wider">
-              <Layers size={15} />
-              <span>Visual Gallery & Deliverables</span>
-            </div>
-
-            <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#F8FAFC]">
-              Project Interface & Deliverables
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {project.gallery.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-2xl bg-[#18181B] border border-[#27272A] overflow-hidden group hover:border-[#38BDF8]/50 transition-colors"
-                >
-                  <div className="relative w-full aspect-video bg-[#111113]">
-                    <Image
-                      src={item.imageSrc}
-                      alt={item.title}
-                      fill
-                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-5 space-y-1">
-                    <h4 className="font-heading text-sm font-bold text-[#F8FAFC]">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs text-[#A1A1AA] leading-relaxed">
-                      {item.caption}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <ProjectGallery gallery={project.gallery} />
         )}
 
         {/* Project Pagination (Next Project Banner) */}

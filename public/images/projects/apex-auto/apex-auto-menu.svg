@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="apexMenuBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0E12"/>
+      <stop offset="100%" stop-color="#08080A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#apexMenuBg)"/>
+
+  <!-- Header -->
+  <text x="120" y="90" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900" fill="#EF4444" letter-spacing="6">APEX MOTORSPORT SERVICE MATRIX</text>
+  <text x="1800" y="90" text-anchor="end" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#71717A" letter-spacing="4">TECHNICAL INSPECTION DOSSIER &amp; SERVICE TIERS</text>
+
+  <!-- 3 Service Package Cards -->
+  <!-- Card 1: Track-Day Pre-Flight -->
+  <g transform="translate(120, 160)">
+    <rect width="520" height="780" rx="16" fill="#14141A" stroke="#272733"/>
+    <text x="40" y="60" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#EF4444" letter-spacing="3">TIER 01 // COMPETITION PREPARATION</text>
+    <text x="40" y="110" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="800" fill="#F8FAFC">Track-Day Pre-Flight</text>
+    <text x="40" y="145" font-family="-apple-system, sans-serif" font-size="14" fill="#A1A1AA">Comprehensive safety and telemetry inspection before competitive circuit events.</text>
+
+    <!-- Checklist Graphic -->
+    <g transform="translate(40, 190)">
+      <rect width="440" height="420" rx="10" fill="#0D0D11" stroke="#22222C"/>
+      <g transform="translate(30, 40)">
+        <circle cx="15" cy="15" r="10" fill="#EF4444"/>
+        <text x="40" y="20" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Brake Fluid Flush (Castrol SRF 590°F)</text>
+        
+        <circle cx="15" cy="85" r="10" fill="#EF4444"/>
+        <text x="40" y="90" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Corner Balancing &amp; Alignment Setup</text>
+        
+        <circle cx="15" cy="155" r="10" fill="#EF4444"/>
+        <text x="40" y="160" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Tire Heat Cycle Assessment &amp; Torque Specs</text>
+        
+        <circle cx="15" cy="225" r="10" fill="#EF4444"/>
+        <text x="40" y="230" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">High-Pressure Oil Cooler Line Check</text>
+        
+        <circle cx="15" cy="295" r="10" fill="#EF4444"/>
+        <text x="40" y="300" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Fire Suppression System Certification</text>
+      </g>
+    </g>
+
+    <text x="40" y="660" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900" fill="#EF4444">$850 USD</text>
+    <text x="40" y="690" font-family="-apple-system, sans-serif" font-size="13" fill="#71717A">Includes complete track telemetry printout</text>
+  </g>
+
+  <!-- Card 2: Engine Calibration & Dyno (Featured Highlight) -->
+  <g transform="translate(700, 160)">
+    <rect width="520" height="780" rx="16" fill="#14141A" stroke="#EF4444" stroke-width="2"/>
+    <text x="40" y="60" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#EF4444" letter-spacing="3">TIER 02 // PERFORMANCE CALIBRATION</text>
+    <text x="40" y="110" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="800" fill="#F8FAFC">Dyno Mapping &amp; ECU</text>
+    <text x="40" y="145" font-family="-apple-system, sans-serif" font-size="14" fill="#A1A1AA">Custom fuel and ignition mapping on 2,000 HP Mainline all-wheel-drive dyno.</text>
+
+    <!-- Dyno Curve Infographic -->
+    <g transform="translate(40, 190)">
+      <rect width="440" height="420" rx="10" fill="#0D0D11" stroke="#22222C"/>
+      <!-- Horsepower Chart -->
+      <path d="M40 340 C120 310 200 240 280 140 C340 70 380 60 400 50" fill="none" stroke="#EF4444" stroke-width="4"/>
+      <!-- Torque Chart -->
+      <path d="M40 280 C120 180 200 120 280 110 C340 120 380 160 400 190" fill="none" stroke="#38BDF8" stroke-width="4"/>
+      <text x="40" y="40" font-family="monospace" font-size="12" font-weight="700" fill="#EF4444">RED: HORSEPOWER (740 BHP)</text>
+      <text x="40" y="65" font-family="monospace" font-size="12" font-weight="700" fill="#38BDF8">BLUE: TORQUE (680 LB-FT)</text>
+      <text x="240" y="380" font-family="monospace" font-size="12" fill="#71717A">RPM: 2,500 – 8,500</text>
+    </g>
+
+    <text x="40" y="660" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900" fill="#F8FAFC">$1,450 USD</text>
+    <text x="40" y="690" font-family="-apple-system, sans-serif" font-size="13" fill="#71717A">Includes dual switchable fuel maps (93 Oct / E85)</text>
+  </g>
+
+  <!-- Card 3: Major Powertrain Rebuild -->
+  <g transform="translate(1280, 160)">
+    <rect width="520" height="780" rx="16" fill="#14141A" stroke="#272733"/>
+    <text x="40" y="60" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#EF4444" letter-spacing="3">TIER 03 // FACTORY RECONDITIONING</text>
+    <text x="40" y="110" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="800" fill="#F8FAFC">Powertrain Overhaul</text>
+    <text x="40" y="145" font-family="-apple-system, sans-serif" font-size="14" fill="#A1A1AA">Engine blueprinting, gearbox rebuilds, and motorsport suspension restoration.</text>
+
+    <g transform="translate(40, 190)">
+      <rect width="440" height="420" rx="10" fill="#0D0D11" stroke="#22222C"/>
+      <g transform="translate(30, 40)">
+        <circle cx="15" cy="15" r="10" fill="#71717A"/>
+        <text x="40" y="20" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Sonic Ultrasonic Block Cleaning</text>
+        
+        <circle cx="15" cy="85" r="10" fill="#71717A"/>
+        <text x="40" y="90" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Forged Piston &amp; Connecting Rod Balancing</text>
+        
+        <circle cx="15" cy="155" r="10" fill="#71717A"/>
+        <text x="40" y="160" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Bespoke Camshaft Profiling &amp; Port Matching</text>
+        
+        <circle cx="15" cy="225" r="10" fill="#71717A"/>
+        <text x="40" y="230" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Sequential Transmission Gear Dogs Lapping</text>
+        
+        <circle cx="15" cy="295" r="10" fill="#71717A"/>
+        <text x="40" y="300" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">24-Month Comprehensive Track Warranty</text>
+      </g>
+    </g>
+
+    <text x="40" y="660" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900" fill="#F8FAFC">CUSTOM QUOTE</text>
+    <text x="40" y="690" font-family="-apple-system, sans-serif" font-size="13" fill="#71717A">Consultation with lead motorsport engineer</text>
+  </g>
+</svg>

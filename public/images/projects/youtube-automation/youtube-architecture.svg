@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0c"/>
+      <stop offset="50%" stop-color="#121217"/>
+      <stop offset="100%" stop-color="#0e0f14"/>
+    </linearGradient>
+    <linearGradient id="redAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="emeraldGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E2028"/>
+      <stop offset="100%" stop-color="#14151B"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Subtle Blueprint Grid -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <path d="M 0,120 L 1920,120 M 0,240 L 1920,240 M 0,360 L 1920,360 M 0,480 L 1920,480 M 0,600 L 1920,600 M 0,720 L 1920,720 M 0,840 L 1920,840 M 0,960 L 1920,960"/>
+    <path d="M 240,0 L 240,1080 M 480,0 L 480,1080 M 720,0 L 720,1080 M 960,0 L 960,1080 M 1200,0 L 1200,1080 M 1440,0 L 1440,1080 M 1680,0 L 1680,1080"/>
+  </g>
+
+  <!-- Top Header Bar -->
+  <g transform="translate(100, 70)">
+    <rect width="42" height="30" rx="8" fill="url(#redAccent)"/>
+    <polygon points="117,80 128,85 117,90" fill="#ffffff"/>
+    <text x="60" y="24" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="24" font-weight="800" letter-spacing="1">YOUTUBE COMMUNITY AI AUTOMATION PIPELINE</text>
+    <text x="60" y="48" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="14" font-weight="500">Autonomous Comment Triage, Sentiment Scoring &amp; Contextual Response Engine</text>
+    <rect x="1500" y="8" width="220" height="36" rx="18" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <circle cx="1520" cy="26" r="6" fill="#10B981"/>
+    <text x="1536" y="31" fill="#34D399" font-family="'Inter', sans-serif" font-size="13" font-weight="700" letter-spacing="1">SYSTEM STATUS: ACTIVE</text>
+  </g>
+
+  <!-- Flow Connecting Lines -->
+  <path d="M 440,430 L 580,430" stroke="#38BDF8" stroke-width="3" stroke-dasharray="8 6"/>
+  <path d="M 940,430 L 1080,430" stroke="#38BDF8" stroke-width="3" stroke-dasharray="8 6"/>
+  <path d="M 1440,430 L 1580,430" stroke="#10B981" stroke-width="3"/>
+
+  <!-- Step 1: Ingestion Node -->
+  <g transform="translate(100, 240)" filter="url(#shadow)">
+    <rect width="340" height="500" rx="16" fill="url(#cardBg)" stroke="#334155" stroke-width="1.5"/>
+    <rect width="340" height="60" rx="16" fill="#181B22"/>
+    <rect x="0" y="50" width="340" height="10" fill="#181B22"/>
+    <circle cx="36" cy="30" r="10" fill="#FF0000" fill-opacity="0.2"/>
+    <circle cx="36" cy="30" r="5" fill="#EF4444"/>
+    <text x="60" y="36" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="16" font-weight="700">01. INGESTION &amp; WEBHOOK</text>
+
+    <!-- Inner Card 1 -->
+    <rect x="24" y="85" width="292" height="110" rx="10" fill="#0F1117" stroke="#262B35"/>
+    <text x="44" y="115" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">TRIGGER EVENT</text>
+    <text x="44" y="140" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="15" font-weight="700">YouTube Data API v3</text>
+    <text x="44" y="165" fill="#64748B" font-family="'Inter', sans-serif" font-size="12">commentThreads.list / webhook polling</text>
+    <text x="44" y="182" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11">&lt;interval: 15s&gt;</text>
+
+    <!-- Inner Card 2 -->
+    <rect x="24" y="215" width="292" height="240" rx="10" fill="#0F1117" stroke="#262B35"/>
+    <text x="44" y="245" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">PAYLOAD PARSER</text>
+    <g font-family="'JetBrains Mono', monospace" font-size="12" fill="#E2E8F0">
+      <text x="44" y="280">authorChannel: &quot;TechSavvy_09&quot;</text>
+      <text x="44" y="310">videoId: &quot;v_910XkLP3&quot;</text>
+      <text x="44" y="340">comment: &quot;Can this run on</text>
+      <text x="44" y="362">M3 chips without lag?&quot;</text>
+      <text x="44" y="395" fill="#10B981">✓ Verified clean input</text>
+      <text x="44" y="420" fill="#38BDF8">✓ Spam score: 0.02 (Passed)</text>
+    </g>
+  </g>
+
+  <!-- Step 2: AI Triage & Semantic Processing -->
+  <g transform="translate(600, 200)" filter="url(#shadow)">
+    <rect width="340" height="580" rx="16" fill="url(#cardBg)" stroke="#38BDF8" stroke-width="2"/>
+    <rect width="340" height="60" rx="16" fill="#0369A1" fill-opacity="0.3"/>
+    <rect x="0" y="50" width="340" height="10" fill="#0369A1" fill-opacity="0.3"/>
+    <text x="24" y="36" fill="#38BDF8" font-family="'Inter', sans-serif" font-size="16" font-weight="800">02. AI SEMANTIC CLASSIFIER</text>
+
+    <!-- Sentiment Meter -->
+    <rect x="24" y="85" width="292" height="95" rx="10" fill="#0F1117" stroke="#262B35"/>
+    <text x="44" y="112" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">SENTIMENT &amp; INTENT</text>
+    <rect x="44" y="125" width="250" height="10" rx="5" fill="#1E293B"/>
+    <rect x="44" y="125" width="210" height="10" rx="5" fill="url(#emeraldGlow)"/>
+    <text x="44" y="155" fill="#34D399" font-family="'Inter', sans-serif" font-size="13" font-weight="700">Intent: High-Interest Buyer (88%)</text>
+    <text x="44" y="172" fill="#64748B" font-family="'Inter', sans-serif" font-size="11">Category: Hardware Compatibility</text>
+
+    <!-- RAG Knowledge Base Retrieval -->
+    <rect x="24" y="195" width="292" height="160" rx="10" fill="#0F1117" stroke="#262B35"/>
+    <text x="44" y="225" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">KNOWLEDGE BASE MATCH (RAG)</text>
+    <rect x="44" y="240" width="252" height="46" rx="6" fill="#172554" stroke="#1E40AF"/>
+    <text x="56" y="260" fill="#93C5FD" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Doc: Mac_M_Series_Support.md</text>
+    <text x="56" y="276" fill="#60A5FA" font-family="'Inter', sans-serif" font-size="11">Similarity confidence: 97.4%</text>
+
+    <text x="44" y="315" fill="#CBD5E1" font-family="'Inter', sans-serif" font-size="13">"Full native ARM64 support</text>
+    <text x="44" y="335" fill="#CBD5E1" font-family="'Inter', sans-serif" font-size="13">benchmarked at 60 FPS."</text>
+
+    <!-- Response Generation -->
+    <rect x="24" y="370" width="292" height="185" rx="10" fill="#0F1117" stroke="#262B35"/>
+    <text x="44" y="400" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">GENERATED DRAFT</text>
+    <rect x="44" y="415" width="252" height="120" rx="8" fill="#141824"/>
+    <text x="56" y="440" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="12" font-style="italic">"Hey @TechSavvy_09! Yes,</text>
+    <text x="56" y="460" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="12" font-style="italic">it runs natively on M3 with full</text>
+    <text x="56" y="480" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="12" font-style="italic">hardware acceleration! Check</text>
+    <text x="56" y="500" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="12" font-style="italic">the pinned benchmark guide."</text>
+    <text x="56" y="525" fill="#38BDF8" font-family="'Inter', sans-serif" font-size="11" font-weight="700">Tone: Friendly • Technical • Direct</text>
+  </g>
+
+  <!-- Step 3: Human-in-the-Loop & Policy Guard -->
+  <g transform="translate(1100, 240)" filter="url(#shadow)">
+    <rect width="340" height="500" rx="16" fill="url(#cardBg)" stroke="#334155" stroke-width="1.5"/>
+    <rect width="340" height="60" rx="16" fill="#181B22"/>
+    <rect x="0" y="50" width="340" height="10" fill="#181B22"/>
+    <circle cx="36" cy="30" r="10" fill="#EAB308" fill-opacity="0.2"/>
+    <circle cx="36" cy="30" r="5" fill="#FACC15"/>
+    <text x="60" y="36" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="16" font-weight="700">03. POLICY &amp; DISPATCH</text>
+
+    <!-- Guardrails Check -->
+    <rect x="24" y="85" width="292" height="145" rx="10" fill="#0F1117" stroke="#262B35"/>
+    <text x="44" y="115" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">POLICY GUARDRAILS</text>
+    <g font-family="'Inter', sans-serif" font-size="12" fill="#E2E8F0">
+      <text x="44" y="145" fill="#10B981">✔ Brand Safety Check: PASSED</text>
+      <text x="44" y="170" fill="#10B981">✔ No Hallucination Risk: PASSED</text>
+      <text x="44" y="195" fill="#10B981">✔ Link Whitelist Verified: PASSED</text>
+      <text x="44" y="220" fill="#38BDF8">✔ Confidence: 99.1% &gt; 90% threshold</text>
+    </g>
+
+    <!-- Dispatch Decision -->
+    <rect x="24" y="245" width="292" height="225" rx="10" fill="#0F1117" stroke="#262B35"/>
+    <text x="44" y="275" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">DISPATCH MODE</text>
+    
+    <rect x="44" y="290" width="252" height="70" rx="8" fill="#052E16" stroke="#15803D"/>
+    <text x="60" y="315" fill="#86EFAC" font-family="'Inter', sans-serif" font-size="13" font-weight="700">Direct Auto-Post Mode</text>
+    <text x="60" y="335" fill="#4ADE80" font-family="'Inter', sans-serif" font-size="11">Confidence exceeds threshold</text>
+    <text x="60" y="350" fill="#22C55E" font-family="'JetBrains Mono', monospace" font-size="10">HTTP POST /youtube/v3/comments</text>
+
+    <text x="44" y="390" fill="#64748B" font-family="'Inter', sans-serif" font-size="11">ALTERNATIVE FALLBACK:</text>
+    <text x="44" y="410" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">Slack channel webhook triage</text>
+    <text x="44" y="430" fill="#64748B" font-family="'Inter', sans-serif" font-size="11">1-click approve button for low confidence</text>
+  </g>
+
+  <!-- Step 4: Outcome & Live Analytics -->
+  <g transform="translate(1500, 240)" filter="url(#shadow)">
+    <rect width="320" height="500" rx="16" fill="url(#cardBg)" stroke="#10B981" stroke-width="1.5"/>
+    <rect width="320" height="60" rx="16" fill="#064E3B" fill-opacity="0.3"/>
+    <rect x="0" y="50" width="320" height="10" fill="#064E3B" fill-opacity="0.3"/>
+    <circle cx="36" cy="30" r="10" fill="#10B981" fill-opacity="0.2"/>
+    <circle cx="36" cy="30" r="5" fill="#10B981"/>
+    <text x="60" y="36" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="16" font-weight="700">04. METRICS &amp; IMPACT</text>
+
+    <!-- Stat 1 -->
+    <rect x="24" y="85" width="272" height="85" rx="10" fill="#0F1117" stroke="#262B35"/>
+    <text x="40" y="115" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">AVG RESPONSE TIME</text>
+    <text x="40" y="150" fill="#38BDF8" font-family="'Inter', sans-serif" font-size="28" font-weight="800">42 sec</text>
+    <text x="145" y="150" fill="#10B981" font-family="'Inter', sans-serif" font-size="12" font-weight="700">↓ 94% faster</text>
+
+    <!-- Stat 2 -->
+    <rect x="24" y="185" width="272" height="85" rx="10" fill="#0F1117" stroke="#262B35"/>
+    <text x="40" y="215" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">COMMUNITY ENGAGEMENT</text>
+    <text x="40" y="250" fill="#34D399" font-family="'Inter', sans-serif" font-size="28" font-weight="800">+310%</text>
+    <text x="165" y="250" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">interaction rate</text>
+
+    <!-- Stat 3 -->
+    <rect x="24" y="285" width="272" height="85" rx="10" fill="#0F1117" stroke="#262B35"/>
+    <text x="40" y="315" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">HOURS SAVED / MONTH</text>
+    <text x="40" y="350" fill="#F59E0B" font-family="'Inter', sans-serif" font-size="28" font-weight="800">120 hrs</text>
+    <text x="165" y="350" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">creator time</text>
+
+    <!-- Live Status -->
+    <rect x="24" y="385" width="272" height="85" rx="10" fill="#161922" stroke="#262B35"/>
+    <text x="40" y="415" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">AUTONOMOUS DISPATCHES</text>
+    <text x="40" y="445" fill="#FFFFFF" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="700">2,418 comments</text>
+  </g>
+
+  <!-- Bottom Details Bar -->
+  <g transform="translate(100, 940)">
+    <rect width="1720" height="60" rx="12" fill="#12141A" stroke="#262B35"/>
+    <text x="30" y="36" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="14" font-weight="600">TECH STACK:</text>
+    <text x="130" y="36" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="13">YouTube Data API v3 • Python Fastify / Asyncio • OpenAI GPT-4o • Qdrant Vector DB • Webhooks • Redis Queue</text>
+  </g>
+</svg>
